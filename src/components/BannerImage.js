@@ -18,7 +18,7 @@ export default function BannerImage() {
         />
       </div>
       <div className="absolute bottom-[267px] right-[136px]">
-        <h1 className="relative max-w-[445px] break-words flex flex-col justify-center font-white font-bold capitalize text-center">
+        <h1 className="relative max-w-[470px] break-words flex flex-col justify-center font-white font-resolute tracking-[2px] leading-tight font-normal capitalize text-center">
           <span className="text-[65px]">JUNTOS POR</span>
           <span className="text-[73px]">UN MEXICO</span>
           <span className="text-[73px]">SIN LIMITES</span>

@@ -1,8 +1,21 @@
-import { Navbar } from '@/components'
-import './globals.css'
-import { Inter } from 'next/font/google'
+import { Navbar } from '@/components';
+import localFont from 'next/font/local';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const resoluteNF = localFont({
+  src: './Resolute NF.ttf',
+  variable: '--font-resolute'
+})
+
+const version1 = localFont({
+  src: './Version1Int.ttf',
+  variable: '--font-version'
+})
+
+const AppliedSansPro = localFont({
+  src: './AppliedSansPro.ttf',
+  variable: '--font-applied-sans'
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${resoluteNF.variable} ${version1.variable} ${AppliedSansPro.variable}`}>
         <Navbar />
         {children}
       </body>
