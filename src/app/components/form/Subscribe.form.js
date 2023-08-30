@@ -32,7 +32,7 @@ export default function SubscribeForm() {
   }
 
   return(
-    <div id="subscribe-section" className="md:absolute md:-top-[104px] w-full max-w-full md:max-w-[calc(50%+20px)] bg-secondary pt-10 pb-24 max-md:px-16 md:py-[82px] md:pl-[140px] md:pr-[88px] box-border z-10">
+    <div id="subscribe-section" className="md:absolute md:-top-[104px] w-full max-w-full md:max-w-[calc(50%+20px)] bg-secondary pt-6 pb-20 px-8 sm:pb-24 sm:pt-10 sm:px-16 md:py-[82px] md:pl-[140px] md:pr-[88px] box-border z-10">
       <TitleCaptionForm
         title={'LA EXPERANZA DE MÉXICO'}
         caption={'Xóchitl Gálvez conoce los desafíos que se enfrentan los mexicanos todos los días y tiene las soluciones que México necesita para un futuro sin límites.'}
@@ -40,9 +40,9 @@ export default function SubscribeForm() {
         typeTextLink={'arrow'}
         link={'#'}
       />
-      <form className="relative mt-[90px] font-white">
+      <form className="relative mt-12 sm:mt-16 md:mt-[90px] font-white">
         <h2 className="mb-4 text-[22px] tracking-[1.32px] text-center">HAGAMOS ESTO JUNTOS</h2>
-        <div className="relative w-[370px] mx-auto flex flex-col gap-[2px] justify-center items-center">
+        <div className="relative w-[318px] sm:w-[370px] mx-auto flex flex-col gap-[2px] justify-center items-center">
           <div className='relative flex flex-col gap-[2px]'>
             <label htmlFor='phoneNumber' className='w-fit font-medium' >Nombre: <span className='text-[#D32F2F]'>*</span></label>
             <input
