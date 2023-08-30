@@ -1,4 +1,5 @@
-import { TitleCaptionText, VideoPlayer } from "@/components";
+import { TitleCaptionText } from "../text";
+import VideoPlayer from '../VideoPlayer'
 
 export default function VideoSection() {
   const linkVideo = "https://drive.google.com/file/d/1-_rJuePFCO2jIiJf6S6KaaO7KFttycqL/preview";

@@ -15,7 +15,13 @@
 }
 
 body {
-  background: #ffffff
+  background: #ffffff;
+}
+
+body,
+nav {
+  max-width: 2400px;
+  margin: auto;
 }
 
 .bg-primary,

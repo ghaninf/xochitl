@@ -1,4 +1,3 @@
-import { Navbar } from '@/components';
 import localFont from 'next/font/local';
 import '../assets/css/globals.css';
 
@@ -26,7 +25,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es_MX">
       <body className={`${resoluteNF.variable} ${version1.variable} ${AppliedSansPro.variable}`}>
-        <Navbar />
         {children}
       </body>
     </html>

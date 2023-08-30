@@ -1,3 +1,6 @@
+export { default as Checkbox } from './Checkbox';
+export * from './Checkbox';
+
 export { default as SubscribeForm } from './Subscribe.form';
 export * from './Subscribe.form';
 

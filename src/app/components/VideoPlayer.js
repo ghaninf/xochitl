@@ -1,4 +1,4 @@
-import styles from '../assets/css/video-player.module.css'
+import styles from '@/assets/css/video-player.module.css'
 
 const VideoPlayer = ({ src, width, height }) => {
   return (

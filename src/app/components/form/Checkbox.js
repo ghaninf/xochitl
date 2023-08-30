@@ -1,4 +1,4 @@
-import Check from '../../assets/image/vector-checklist.svg';
+import Check from '@/assets/image/vector-checklist.svg';
 import Icon from '../icon/Icon';
 
 

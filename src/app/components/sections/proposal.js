@@ -1,11 +1,11 @@
 'use client'
-
-import { ArrowText, Icon } from "@/components"
-
-import IconExpand from '../assets/image/vector-expand.svg';
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+
+import IconExpand from '@/assets/image/vector-expand.svg';
+import Icon from "../icon/Icon";
+import { ArrowText } from "../text";
 
 export default function ProposalSection() {
   const router = useRouter();
@@ -102,7 +102,7 @@ export default function ProposalSection() {
               </li>
             ))
           }
-          <ArrowText title={'VER TODAS'} color={'font-secondary'} arrowCollor={'#0E3179'} href={'#'}  width={30} height={24} additionalClass={'mt-28 text-[30px]'} />
+          <ArrowText title={'VER TODAS'} color={'font-secondary'} arrowCollor={'#0E3179'} href={'/'}  width={30} height={24} additionalClass={'mt-28 text-[30px]'} />
         </ul>
       </article>
     </section>
