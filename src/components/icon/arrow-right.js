@@ -1,0 +1,7 @@
+export default function VectorArrowRight ({ fill }) {
+  return(
+    <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="Vector" d="M17.4699 0L15.8611 2.1L23.9053 10.5H0V13.5H23.9053L15.8611 21.9L17.4699 24L29 12L17.4699 0Z" fill={`${fill || 'white'}`}/>
+    </svg>
+  )
+}

@@ -37,6 +37,10 @@ body {
   color: var(--primary-color);
 }
 
+.fill-primary {
+  fill: var(--primary-color);
+}
+
 .bg-secondary,
 #bg-secondary {
   background-color: var(--secondary-color);
@@ -45,6 +49,10 @@ body {
 .font-secondary,
 #font-secondary {
   color: var(--secondary-color);
+}
+
+.fill-secondary {
+  fill: var(--secondary-color);
 }
 
 .font-black,

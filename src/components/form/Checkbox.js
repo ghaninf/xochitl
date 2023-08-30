@@ -1,5 +1,5 @@
 import Check from '../../assets/image/vector-checklist.svg';
-import Icon from '../Icon';
+import Icon from '../icon/Icon';
 
 
 export default function Checkbox({ value }) {

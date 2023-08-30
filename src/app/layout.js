@@ -1,19 +1,19 @@
 import { Navbar } from '@/components';
 import localFont from 'next/font/local';
-import './globals.css';
+import '../assets/css/globals.css';
 
 const resoluteNF = localFont({
-  src: './Resolute NF.ttf',
+  src: '../assets/font/Resolute NF.ttf',
   variable: '--font-resolute'
 })
 
 const version1 = localFont({
-  src: './Version1Int.ttf',
+  src: '../assets/font/Version1Int.ttf',
   variable: '--font-version'
 })
 
 const AppliedSansPro = localFont({
-  src: './AppliedSansPro.ttf',
+  src: '../assets/font/AppliedSansPro.ttf',
   variable: '--font-applied-sans'
 })
 
@@ -24,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es_MX">
       <body className={`${resoluteNF.variable} ${version1.variable} ${AppliedSansPro.variable}`}>
         <Navbar />
         {children}

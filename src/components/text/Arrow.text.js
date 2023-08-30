@@ -1,22 +1,15 @@
 import Link from "next/link";
 
-import Icon from "../Icon";
+import { VectorArrowRight } from "../icon";
 
-import ArrowRight from '../../assets/image/vector-arrow-right.svg';
-
-export default function Arrow({ title, href, size, width, height }) {
-
-
+export default function Arrow({ title, color, arrowCollor, href, width, height, additionalClass }) {
   return(
     <div className="relative w-fit pb-1 border-b-2 border-pink-500 box-border">
-      <Link href={href} className={`relative max-w-fit flex flex-row gap-x-4 items-center font-white text-[${size || '26.75px'}]`} >
+      <Link href={href} className={`relative max-w-fit font-appliedSans flex flex-row gap-x-4 items-center ${ color || 'text-white'} ${ additionalClass || ''} text-[26.75px]`} >
         {title}
-        <Icon
-          src={ArrowRight}
-          title={title}
-          width={width}
-          height={height}
-        />
+        <div className={`relative w-${width || '12'} h-${height || '12'}`} title={title} >
+          <VectorArrowRight fill={arrowCollor} />
+        </div>
       </Link>
     </div>
   )

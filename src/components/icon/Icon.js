@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 
-export default function Icon({ src, title, width, height }) {
+export default function Icon({ src, title, width, height, additionalCSS }) {
 
   return(
     <div className="relative w-fit h-fit">
@@ -11,6 +11,7 @@ export default function Icon({ src, title, width, height }) {
         title={title}
         alt={title}
         src={src}
+        className={`${additionalCSS || ''}`}
       />
     </div>
   )
