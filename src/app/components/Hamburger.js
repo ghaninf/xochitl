@@ -3,11 +3,11 @@
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-import '../../assets/css/hamburger.css';
+import '@/assets/css/hamburger.css';
 import Link from 'next/link';
 import Logo from './Logo';
 
-import LogoWhite from '../../assets/image/logo-xochitl.svg';
+import LogoWhite from '@/assets/image/logo-xochitl.svg';
 import Button from './Button';
 
 export default function Hamburger(props) {
@@ -16,7 +16,7 @@ export default function Hamburger(props) {
 
   return(
     <>
-      <div className="block relative w-8 h-8 md:hidden z-50">
+      <div className="block relative w-8 h-8 lg:hidden z-50">
         <input className="hidden" type="checkbox" id="menu-toggle" />
         <label onClick={() => setPopup(!popup)} htmlFor="menu-toggle" className="menu-button-container">
           <div className="menu-button"/>
@@ -25,7 +25,7 @@ export default function Hamburger(props) {
       {
         popup
         ? <div className='absolute top-0 left-0 right-0 w-full min-h-screen bg-secondary z-40 pt-4'>
-            <ul className='relative w-full flex flex-col gap-y-10 justify-center items-center font-resolute text-white md:hidden'>
+            <ul className='relative w-full flex flex-col gap-y-10 justify-center items-center font-resolute text-white lg:hidden'>
               <Logo src={LogoWhite} />
               <li className='relative w-fit pb-1 border-b border-pink-600 cursor-pointer'><Link href={'/'}>XÓCHITL</Link></li>
               <li className='relative w-fit pb-1 border-b border-pink-600 cursor-pointer'><Link href={'/events'}>AGENDA</Link></li>

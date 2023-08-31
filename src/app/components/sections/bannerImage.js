@@ -26,6 +26,7 @@ export default function BannerImageSection() {
         <ArrowText
           title={'ÚNETE AHORA'}
           href={'#'}
+          arrowColor={'white'}
         />
       </div>
     </section>

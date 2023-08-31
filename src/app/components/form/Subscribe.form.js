@@ -32,7 +32,7 @@ export default function SubscribeForm() {
   }
 
   return(
-    <div id="subscribe-section" className="md:absolute md:-top-[104px] w-full max-w-full md:max-w-[calc(50%+20px)] bg-secondary pt-6 pb-20 px-8 sm:pb-24 sm:pt-10 sm:px-16 md:py-[82px] md:pl-[140px] md:pr-[88px] box-border z-10">
+    <div id="subscribe-section" className="relative lg:absolute lg:-top-[104px] w-full max-w-full lg:max-w-[calc(50%+20px)] bg-secondary pt-6 pb-16 px-8 sm:pb-20 sm:pt-10 sm:px-16 lg:py-16 xl:py-[82px] lg:pl-[140px] lg:pr-[88px] box-border z-10">
       <TitleCaptionForm
         title={'LA EXPERANZA DE MÉXICO'}
         caption={'Xóchitl Gálvez conoce los desafíos que se enfrentan los mexicanos todos los días y tiene las soluciones que México necesita para un futuro sin límites.'}

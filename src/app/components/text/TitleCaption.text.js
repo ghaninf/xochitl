@@ -6,7 +6,7 @@ export default function TitleCaption({ title, title2, caption, textLink, typeTex
 
   const listType = {
     button: <Button text={textLink} typeColor={color} onClick={onClick} />,
-    arrow: <ArrowText title={textLink} href={link} />
+    arrow: <ArrowText title={textLink} href={link} arrowColor={'white'} />
   }
 
   return(

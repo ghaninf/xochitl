@@ -28,6 +28,7 @@ export default function BannerImage() {
         <ArrowText
           title={'ÚNETE AHORA'}
           href={'#subscribe-section'}
+          arrowCollor={'white'}
         />
       </div>
     </section>

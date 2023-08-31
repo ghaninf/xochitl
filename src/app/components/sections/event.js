@@ -6,8 +6,8 @@ import { useState } from "react";
 
 import Icon from '../icon/Icon';
 
-import IconClock from '../../../assets/image/vector-clock.svg';
-import IconLocation from '../../../assets/image/vector-pin-location.svg';
+import IconClock from '@/assets/image/vector-clock.svg';
+import IconLocation from '@/assets/image/vector-pin-location.svg';
 
 export default function EventSection(props) {
   const [state, setState] = useState([

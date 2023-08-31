@@ -19,7 +19,7 @@ export default function HeaderFilter() {
             width={36}
             height={36}
             src={IconBack}
-            additionalCSS={'object-cover rotate-180 cursor-pointer'}
+            additionalCSS={'object-cover cursor-pointer'}
           />
           <Icon
             title={'Next Month'}

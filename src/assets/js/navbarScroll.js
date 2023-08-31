@@ -22,7 +22,7 @@ const ScrollEffect = ({ page }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [page]);
 
   return null;
 };
