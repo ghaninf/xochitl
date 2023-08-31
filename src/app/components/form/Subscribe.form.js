@@ -4,6 +4,7 @@ import { useState } from "react";
 import { TitleCaptionForm } from ".";
 import Button from "../Button";
 import Checkbox from "./Checkbox";
+import Script from "next/script";
 
 export default function SubscribeForm() {
 
@@ -40,6 +41,7 @@ export default function SubscribeForm() {
         typeTextLink={'arrow'}
         link={'#'}
       />
+      <iframe src="https://embeds.beehiiv.com/c5c6d607-3828-492e-a80d-44a8c5bb7ba6" data-test-id="beehiiv-embed" width="480" height="320" frameborder="0" scrolling="no" style={{ borderRadius: 4, border: '2px solid #e5e7eb', margin: 0, backgroundColor: 'transparent' }}></iframe>
       <form className="relative mt-12 sm:mt-16 md:mt-[90px] font-white">
         <h2 className="mb-4 text-[22px] tracking-[1.32px] text-center">HAGAMOS ESTO JUNTOS</h2>
         <div className="relative w-[318px] sm:w-[370px] mx-auto flex flex-col gap-[2px] justify-center items-center">
@@ -87,6 +89,7 @@ export default function SubscribeForm() {
           </div>
         </div>
       </form>
+      <Script async type="text/javascript" src="https://embeds.beehiiv.com/attribution.js" />
     </div>
   )
 }

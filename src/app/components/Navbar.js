@@ -3,10 +3,10 @@
 import Link from "next/link";
 import Button from "./Button";
 import Logo from "./Logo";
-import LogoWhite from "@/assets/image/logo-xochitl.svg";
-import LogoBlue from "@/assets/image/logo-xochitl-secondary.svg";
-import ScrollEffect from "@/assets/js/navbarScroll";
 import Hamburger from "./Hamburger";
+import LogoWhite from "../assets/image/logo-xochitl.svg";
+import LogoBlue from "../assets/image/logo-xochitl-secondary.svg";
+import ScrollEffect from "../assets/js/navbarScroll";
 
 export default function Navbar(props) {
   return(

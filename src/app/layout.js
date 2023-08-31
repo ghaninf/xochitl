@@ -1,19 +1,19 @@
 import localFont from 'next/font/local';
-import '@/assets/css/globals.css';
-import '@/assets/css/animation.css';
+import './assets/css/globals.css';
+import './assets/css/animation.css';
 
 const resoluteNF = localFont({
-  src: '../assets/font/Resolute NF.ttf',
+  src: './assets/font/Resolute NF.ttf',
   variable: '--font-resolute'
 })
 
 const version1 = localFont({
-  src: '../assets/font/Version1Int.otf',
+  src: './assets/font/Version1Int.otf',
   variable: '--font-version'
 })
 
 const AppliedSansPro = localFont({
-  src: '../assets/font/AppliedSansPro.ttf',
+  src: './assets/font/AppliedSansPro.ttf',
   variable: '--font-applied-sans'
 })
 

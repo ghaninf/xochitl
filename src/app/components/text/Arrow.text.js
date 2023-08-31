@@ -2,8 +2,8 @@ import Link from "next/link";
 
 import Icon from "../icon/Icon";
 
-import ArrowWhite from '@/assets/image/vector-arrow-white.svg';
-import ArrowBlue from '@/assets/image/vector-arrow-blue.svg';
+import ArrowWhite from '../../assets/image/vector-arrow-white.svg';
+import ArrowBlue from '../../assets/image/vector-arrow-blue.svg';
 
 export default function Arrow({ title, color, arrowColor, href, width, height, additionalClass }) {
   const listIcon = {

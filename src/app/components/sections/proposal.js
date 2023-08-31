@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
-import IconExpand from '@/assets/image/vector-expand.svg';
 import Icon from "../icon/Icon";
 import { ArrowText } from "../text";
-import { handleRichText } from "@/app/utils";
+import { handleRichText } from "../../utils";
+import IconExpand from '../../assets/image/vector-expand.svg';
 
 export default function ProposalSection() {
   const router = useRouter();
