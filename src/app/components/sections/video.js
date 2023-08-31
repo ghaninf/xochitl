@@ -2,10 +2,10 @@ import { TitleCaptionText } from "../text";
 import VideoPlayer from '../VideoPlayer'
 
 export default function VideoSection() {
-  const linkVideo = "https://drive.google.com/file/d/1-_rJuePFCO2jIiJf6S6KaaO7KFttycqL/preview";
+  const linkVideo = "https://drive.google.com/file/d/1O-rE5FhkCSr_oFEULwuZr2DW5LGw-l8Z/preview";
 
   return(
-    <section className="relative w-full h-auto mt-64 pl-[78px] py-[138px] box-border bg-secondary">
+    <section className="relative max-lg:flex max-lg:flex-row max-lg:gap-10 w-full h-auto xl:mt-64 lg:mt-52 md:mt-40 xl:pl-[78px] lg:pl-14 md:pl-10 pl-6 xl:py-[138px] lg:py-24 md:py-16 py-12  box-border bg-secondary">
       <div className="relative max-w-[390px]">
         <TitleCaptionText
           title={'SIN MIEDO'}
@@ -16,7 +16,7 @@ export default function VideoSection() {
           link={'#'}
         />
       </div>
-      <div className="absolute -top-[230px] right-0 w-fit h-full">
+      <div className="relative max-sm:-mt-10 max-md:-mt-16 max-lg:-mt-32 lg:absolute lg:-top-[230px] right-0 w-full max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-full">
         <VideoPlayer src={linkVideo} width={680} height={680} />
       </div>
     </section>

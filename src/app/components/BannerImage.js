@@ -25,11 +25,13 @@ export default function BannerImage() {
           <span className="text-[34px] md:text-[73px]">UN MEXICO</span>
           <span className="text-[34px] md:text-[73px]">SIN LIMITES</span>
         </h1>
-        <ArrowText
-          title={'ÚNETE AHORA'}
-          href={'#subscribe-section'}
-          arrowCollor={'white'}
-        />
+        <div className="relative mt-8 lg:mt-16">
+          <ArrowText
+            title={'ÚNETE AHORA'}
+            href={'/#subscribe-section'}
+            arrowColor={'white'}
+          />
+        </div>
       </div>
     </section>
   )

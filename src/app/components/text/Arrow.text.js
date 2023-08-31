@@ -12,11 +12,12 @@ export default function Arrow({ title, color, arrowColor, href, width, height, a
   }
 
   return(
-    <div className="relative w-fit pb-1 border-b-2 border-pink-500 box-border">
-      <Link href={href} className={`relative max-w-fit font-appliedSans flex flex-row gap-x-4 items-center ${ color || 'text-white'} ${ additionalClass || ''} text-[26.75px]`} >
+    <div className="relative group w-fit pb-1 box-border cursor-pointer hover:before:scale-x-90 hover:before:-left-[22px] before:w-full before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:scale-x-100 before:duration-200">
+      <Link href={href} className={`relative max-w-fit font-version font-normal tracking-wide flex flex-row gap-x-4 items-center ${ color || 'text-white'} ${ additionalClass || ''} text-lg md:text-2xl lg:text-2xl xl:text-[27px]`} >
         {title}
-        <div className={`relative w-fit h-fit`} title={title} >
+        <div className={`relative w-fit h-fit ease-in-out duration-200 group-hover:animate-arrow`} title={title} >
           <Icon
+            title={title}
             width={width}
             height={height}
             src={listIcon[arrowColor]}
