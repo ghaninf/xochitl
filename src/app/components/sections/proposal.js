@@ -80,7 +80,7 @@ export default function ProposalSection() {
                     title={'Xóchitlnomics'}
                     additionalCSS={`max-h-3 lg:max-h-4 max-w-[8px] lg:max-w-[11px] ${el?.expand ? 'rotate-90' : ''}`}
                   />
-                  <span className={`${el?.expand ? 'before:w-0' : ''} relative before:w-full before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
+                  <span className={`${el?.expand ? 'before:w-0' : 'before:w-full'} relative before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
                 <div className={`${el.expand ? 'scale-100 h-auto' : 'h-0 scale-y-0'} relative mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
                   {handleRichText(el.description)}
