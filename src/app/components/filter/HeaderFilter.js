@@ -2,8 +2,8 @@ import moment from "moment";
 import Icon from "../icon/Icon";
 require('moment/locale/es-mx');
 
-import IconNext from '@/assets/image/vector-button-next.svg';
-import IconBack from '@/assets/image/vector-button-back.svg';
+import IconNext from '../../assets/image/vector-button-next.svg';
+import IconBack from '../../assets/image/vector-button-back.svg';
 
 export default function HeaderFilter() {
   let currentTime = moment();

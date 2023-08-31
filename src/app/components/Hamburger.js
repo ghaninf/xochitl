@@ -3,12 +3,12 @@
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-import '@/assets/css/hamburger.css';
 import Link from 'next/link';
 import Logo from './Logo';
 
-import LogoWhite from '@/assets/image/logo-xochitl.svg';
 import Button from './Button';
+import LogoWhite from '../assets/image/logo-xochitl.svg';
+import '../assets/css/hamburger.css';
 
 export default function Hamburger(props) {
   const pathname = usePathname();

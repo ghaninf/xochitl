@@ -4,11 +4,12 @@ import { useState } from "react";
 import { TitleCaptionForm } from ".";
 import Button from "../Button";
 import Checkbox from "./Checkbox";
+import Script from "next/script";
 
 export default function SubscribeForm() {
 
   const [state, setState] = useState({
-    phoneNumber: '',
+    name: '',
     email: '',
     checked: false
   })
@@ -27,12 +28,33 @@ export default function SubscribeForm() {
     }))
   }
 
-  const handleSend = () => {
-
+  const submitForm = () => {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(state)
+    };
+    const publicURL = process.env.NEXT_PUBLIC_URL
+    
+    fetch(`${publicURL}/api/subscribe`, requestOptions)
+      .then(() => {
+        setState({
+          checked: false,
+          email: '',
+          name: ''
+        })
+      })
+      .catch(error => {
+        setState(prev => ({
+          ...prev,
+          errorMessage: error.message
+        }))
+      })
   }
 
   return(
     <div id="subscribe-section" className="relative lg:absolute lg:-top-[104px] w-full max-w-full lg:max-w-[calc(50%+20px)] bg-secondary pt-6 pb-16 px-8 sm:pb-20 sm:pt-10 sm:px-16 lg:py-16 xl:py-[82px] lg:pl-[140px] lg:pr-[88px] box-border z-10">
+      <p>{state?.errorMessage}</p>
       <TitleCaptionForm
         title={'LA EXPERANZA DE MÉXICO'}
         caption={'Xóchitl Gálvez conoce los desafíos que se enfrentan los mexicanos todos los días y tiene las soluciones que México necesita para un futuro sin límites.'}
@@ -44,16 +66,13 @@ export default function SubscribeForm() {
         <h2 className="mb-4 text-[22px] tracking-[1.32px] text-center">HAGAMOS ESTO JUNTOS</h2>
         <div className="relative w-[318px] sm:w-[370px] mx-auto flex flex-col gap-[2px] justify-center items-center">
           <div className='relative flex flex-col gap-[2px]'>
-            <label htmlFor='phoneNumber' className='w-fit font-medium' >Nombre: <span className='text-[#D32F2F]'>*</span></label>
+            <label htmlFor='name' className='w-fit font-medium' >Nombre: <span className='text-[#D32F2F]'>*</span></label>
             <input
-              type='tel'
-              id='phoneNumber'
-              name='phoneNumber'
-              pattern="/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/g"
-              minLength={12}
-              maxLength={17}
+              type='text'
+              id='name'
+              name='name'
               placeholder={'tu nombre'}
-              value={state.phoneNumber}
+              value={state.name}
               onChange={handleChange}
               className='w-[318px] py-[10px] px-4 border border-transparant
                 focus:outline-none focus:border focus:ring-1 focus:ring-blue-600
@@ -78,7 +97,7 @@ export default function SubscribeForm() {
             typeButton={'button'}
             typeColor={'tertiary'}
             text={'UNIRME AHORA'}
-            onClick={handleSend}
+            onClick={submitForm}
             customClass={'min-w-[318px] mt-4'}
           />
           <div onClick={handleClick} className="relative mt-8 -mr-12 flex flex-row flex-nowrap gap-x-4 cursor-pointer">
@@ -87,6 +106,7 @@ export default function SubscribeForm() {
           </div>
         </div>
       </form>
+      <Script async type="text/javascript" src="https://embeds.beehiiv.com/attribution.js" />
     </div>
   )
 }

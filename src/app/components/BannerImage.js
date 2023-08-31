@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import BannerImageXochilt from '@/assets/image/banner-image.png';
+import BannerImageXochilt from '../assets/image/banner-image.png';
 import { ArrowText } from "./text";
 
 export default function BannerImage() {

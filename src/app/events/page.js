@@ -2,7 +2,7 @@
 
 import { Filter, HeaderFilter, Icon, EventSection, Navbar } from '../components';
 
-import Watermark from '@/assets/image/vector-watermark.svg';
+import Watermark from '../assets/image/vector-watermark.svg';
 
 export default function Events() {
 
