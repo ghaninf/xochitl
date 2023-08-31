@@ -2,8 +2,6 @@ import { TitleCaptionText } from "../text";
 import VideoPlayer from '../VideoPlayer'
 
 export default function VideoSection() {
-  // const linkVideo = "https://drive.google.com/file/d/1O-rE5FhkCSr_oFEULwuZr2DW5LGw-l8Z/preview";
-  // const linkVideo = "https://drive.google.com/file/d/1nBW_BGsKpSxOPI71L13-sJIrHV1wJpad/preview"
   const linkVideo = "https://mega.nz/embed/lyt1zBDA#oXLwhWOgNly83QKydaPKcMmlrG2b6UB2twkVms0EkbU!1a1m"
 
   return(
