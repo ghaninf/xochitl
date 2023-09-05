@@ -6,7 +6,7 @@ import Logo from "./Logo";
 
 export default function Footer () {
   return (
-    <footer className="flex flex-col gap-5 p-10 md:p-20">
+    <footer className="flex flex-col gap-5 md:gap-14 p-10 md:px-20 md:py-10">
       <div className="flex flex-col md:flex-row gap-5">
         <div className="basis-1/2 flex flex-col gap-5 md:gap-10">
           {/* <Image src={XochiltLogo} alt="xochitl-logo" width={135}/> */}
