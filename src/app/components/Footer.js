@@ -1,6 +1,11 @@
 import Link from "next/link";
 import XochitlLogo from '../assets/image/xochitl-galvez.png';
 import JuntosX from '../assets/image/juntos-x.png';
+import FacebookIcon from '../assets/image/socmed/facebook.png';
+import TwitterIcon from '../assets/image/socmed/twitter.png';
+import InstagramIcon from '../assets/image/socmed/instagram.png';
+import YoutubeIcon from '../assets/image/socmed/youtube.png';
+import DiscordIcon from '../assets/image/socmed/discord.png';
 import Logo from "./Logo";
 
 export default function Footer () {
@@ -43,12 +48,52 @@ export default function Footer () {
           </p>
         </div>
         <div className="basis-1/2 lg:basis-2/3 flex md:items-center">
-          <ul className="flex flex-row w-full justify-evenly md:justify-normal md:gap-10">
-            <li><a href="https://www.facebook.com/">Fb</a></li>
+          <ul className="flex flex-row w-full items-center justify-evenly md:justify-normal md:gap-10">
+            {/* <li><a href="https://www.facebook.com/"></a></li>
             <li><a href="https://www.twitter.com/">Tw</a></li>
             <li><a href="https://www.instagram.com/">Ig</a></li>
             <li><a href="https://www.youtube.com/">Yt</a></li>
-            <li><a href="https://www.discord.com/">Dc</a></li>
+            <li><a href="https://www.discord.com/">Dc</a></li> */}
+            <li>
+              <Logo
+                src={FacebookIcon}
+                width="w-[10.03px] md:w-[14.18px]"
+                height="h-[19.11px] md:h-[27.01px]"
+                href="https://www.facebook.com"
+              />
+            </li>
+            <li>
+              <Logo
+                src={TwitterIcon}
+                width="w-[21.73px] md:w-[30.72px]"
+                height="h-[17.66px] md:h-[24.96px]"
+                href="https://www.twitter.com"
+              />
+            </li>
+            <li>
+              <Logo
+                src={InstagramIcon}
+                width="w-[19.11px] md:w-[27.01px]"
+                height="h-[19.11px] md:h-[27.01px]"
+                href="https://www.instagram.com"
+              />
+            </li>
+            <li>
+              <Logo
+                src={YoutubeIcon}
+                width="w-[29px] md:w-[41px]"
+                height="h-[29px] md:h-[41px]"
+                href="https://www.youtube.com"
+              />
+            </li>
+            <li>
+              <Logo
+                src={DiscordIcon}
+                width="w-[22.63px] md:w-[32px]"
+                height="h-[17.25px] md:h-[24.39px]"
+                href="https://www.discord.com"
+              />
+            </li>
           </ul>
         </div>
       </div>
