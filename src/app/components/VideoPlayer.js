@@ -8,7 +8,6 @@ const VideoPlayer = ({ src, width, height }) => {
         height={height}
         allow="autoplay"
         allowFullScreen
-        frameborder="0"
         className='absolute top-0 left-0 right-0 bottom-0 w-full h-full'
       />
     </div>

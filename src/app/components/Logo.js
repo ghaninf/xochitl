@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Logo ({ src }) {
 
   return(
-    <Link href={'/'} className="" >
+    <Link href={'/meets'} className="" >
       <div className="relative min-w-[86px] min-h-[31px] md:min-w-[160px] md:min-h-[57px]">
         <Image
           fill
