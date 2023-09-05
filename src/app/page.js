@@ -1,4 +1,5 @@
 import { BannerImage, Button, Navbar, ProposalSection, SubscribeForm, VideoSection } from "./components";
+import Footer from "./components/Footer";
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <ProposalSection />
         <VideoSection />
       </main>
+      <Footer/>
     </>
   )
 }
