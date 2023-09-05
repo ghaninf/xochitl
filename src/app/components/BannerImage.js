@@ -1,31 +1,48 @@
 import Image from "next/image";
 
-import BannerImageXochilt from '../assets/image/banner-image.png';
+import BannerImageXochilt from '../assets/image/logo-kokone.png';
 import { ArrowText } from "./text";
 
 export default function BannerImage() {
   return(
-    <section className="relative w-full max-w-full max-h-[1440px] overflow-hidden flex flex-col h-[550px] md:h-[1028px] bg-contain">
-      <div className="absolute w-[150%] md:w-full top-0 md:-top-20 left-0 right-0 py-[550px] md:py-[810px] ">
-        <Image
-          fill
-          placeholder={"blur"}
-          quality={100}
-          sizes={'100vw'}
-          priority={true}
-          title={'Xóchitl Gálvez'}
-          alt={'Xóchitl Gálvez'}
-          src={BannerImageXochilt}
-          className={'object-contain md:object-cover object-top aspect-video'}
-        />
-      </div>
-      <div className="absolute left-8 bottom-10 md:left-auto md:bottom-[267px] md:right-[136px]">
-        <h1 className="relative max-w-[470px] break-words flex flex-col justify-center font-white font-resolute tracking-[2px] leading-tight font-normal capitalize text-center">
+    // <section className="relative bg-[#0E3179] w-full max-w-full max-h-[1440px] overflow-hidden grid md:grid-cols-2 md:h-[1028px] bg-contain">
+    //   <div className="flex justify-center items-center">
+    //     <Image src={BannerImageXochilt} alt="banner-image" width={500} />
+    //     <div className="absolute left-0 right-0 bg-yellow-200 flex md:hidden flex-col justify-center gap-10">
+    //       <h1 className="max-w-[470px] break-words flex flex-col justify-center font-white font-resolute tracking-[2px] leading-tight font-normal capitalize text-center">
+    //         <span className="text-[30px] md:text-[65px]">JUNTOS POR</span>
+    //         <span className="text-[34px] md:text-[73px]">UN MEXICO</span>
+    //         <span className="text-[34px] md:text-[73px]">SIN LIMITES</span>
+    //       </h1>
+    //       <ArrowText
+    //         title={'ÚNETE AHORA'}
+    //         href={'/#subscribe-section'}
+    //         arrowColor={'white'}
+    //       />
+    //     </div>
+    //   </div>
+    //   <div className="hidden md:flex flex-col justify-center gap-10">
+    //     <h1 className="max-w-[470px] break-words flex flex-col justify-center font-white font-resolute tracking-[2px] leading-tight font-normal capitalize text-center">
+    //       <span className="text-[30px] md:text-[65px]">JUNTOS POR</span>
+    //       <span className="text-[34px] md:text-[73px]">UN MEXICO</span>
+    //       <span className="text-[34px] md:text-[73px]">SIN LIMITES</span>
+    //     </h1>
+    //     <ArrowText
+    //       title={'ÚNETE AHORA'}
+    //       href={'/#subscribe-section'}
+    //       arrowColor={'white'}
+    //     />
+    //   </div>
+    // </section>
+    <section className="relative bg-[#0E3179] h-screen max-h-[1440px] md:h-[1028px] w-full flex overflow-hidden">
+      <Image src={BannerImageXochilt} alt="banner-image" className="absolute top-5 md:top-24 md:left-10" width={700}/>
+      <div className="absolute bottom-20 left-0 right-0 w-full flex flex-col items-start md:items-end px-10 md:px-28 md:pb-16 gap-4">
+        <h1 className="max-w-[470px] break-words flex flex-col justify-center font-white font-resolute tracking-[2px] leading-tight font-normal capitalize text-center">
           <span className="text-[30px] md:text-[65px]">JUNTOS POR</span>
           <span className="text-[34px] md:text-[73px]">UN MEXICO</span>
           <span className="text-[34px] md:text-[73px]">SIN LIMITES</span>
         </h1>
-        <div className="relative mt-8 lg:mt-16">
+        <div>
           <ArrowText
             title={'ÚNETE AHORA'}
             href={'/#subscribe-section'}
