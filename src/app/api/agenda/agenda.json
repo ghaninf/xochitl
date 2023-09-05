@@ -1,0 +1,69 @@
+{
+  "agenda": [
+    {
+      "title": "Frente Amplio por México",
+      "status": "done",
+      "description": "“La reconstrucción institucional: gastar el dinero en lo que se necesita”",
+      "date": 1692662400000,
+      "timeline": [
+        {
+          "startTimestamp": 1692640800000,
+          "endTimestamp": 1692687600000,
+          "timeDescription": ""
+        }
+      ],
+      "location": "León, Guanajuato",
+      "type": ""
+    },
+    {
+      "title": "Frente Amplio por México",
+      "status": "done",
+      "description": "Foro Regional México y el mundo: si promovemos a México ¿Vendrán más oportunidades?",
+      "date": 1693008000000,
+      "timeline": [
+        {
+          "startTimestamp": 1693044000000,
+          "endTimestamp": 0,
+          "timeDescription": "(tiempo del centro de México)"
+        }
+      ],
+      "location": "Cámara de Comercio de Guadalajara, Jalisco",
+      "type": ""
+    },
+    {
+      "title": "Encuentro Con Mujeres y con sus Simpatizantes",
+      "status": "done",
+      "description": "",
+      "date": 1693094400000,
+      "timeline": [
+        {
+          "startTimestamp": 1693110600000,
+          "endTimestamp": 0,
+          "timeDescription": "horas en FICOTTRECE"
+        },
+        {
+          "startTimestamp": 1693130400000,
+          "endTimestamp": 0,
+          "timeDescription": "horas en el lobby del Centro de Convenciones"
+        }
+      ],
+      "location": "Aguascalientes",
+      "type": ""
+    },
+    {
+      "title": "Xochitl VA",
+      "status": "cancel",
+      "description": "",
+      "date": 1693180800000,
+      "timeline": [
+        {
+          "startTimestamp": 1693191600000,
+          "endTimestamp": 0,
+          "timeDescription": "horas"
+        }
+      ],
+      "location": "Plaza Miguel Auza de la capital del estado, Zacatecas",
+      "type": ""
+    }
+  ]
+}
