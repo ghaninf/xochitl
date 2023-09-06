@@ -86,7 +86,7 @@ export default function Meets() {
           </div>
         </section>
       </main>
-      <Footer borderStyle="border-t-2 border-[color:var(--secondary-color)]"/>
+      <Footer borderStyle="border-t-[1.25px] border-[color:var(--secondary-color)]"/>
     </>
   )
 }
