@@ -1,23 +1,24 @@
 import { TitleCaptionText } from "../text";
-import VideoPlayer from '../VideoPlayer'
 
 export default function VideoSection() {
-  const linkVideo = "https://mega.nz/embed/lyt1zBDA#oXLwhWOgNly83QKydaPKcMmlrG2b6UB2twkVms0EkbU!1a1m"
+  // const linkVideo = "https://mega.nz/embed/lyt1zBDA#oXLwhWOgNly83QKydaPKcMmlrG2b6UB2twkVms0EkbU!1a1m"
 
   return(
-    <section className="relative max-lg:flex max-lg:flex-row max-lg:gap-10 w-full h-auto xl:mt-64 lg:mt-52 md:mt-40 xl:pl-[78px] lg:pl-14 md:pl-10 pl-6 xl:py-[138px] lg:py-24 md:py-16 py-12  box-border bg-secondary">
-      <div className="relative max-w-[390px]">
-        <TitleCaptionText
-          title={'SIN MIEDO'}
-          title2={'A NADA'}
-          caption={'Xóchitl toda su vida se ha enfrentado y ha luchado contra la desigualdad en México y está aquí para luchar por la gente de México.'}
-          typeTextLink={'arrow'}
-          textLink={'CONOCE A XÓCHITL'}
-          link={'#'}
-        />
+    <section className="relative w-full lg:h-[667px] flex flex-col lg:flex-row-reverse bg-[color:var(--secondary-color)]">
+      <div className="lg:absolute flex px-2 lg:p-0 -top-10 lg:-top-32 lg:right-20 lg:w-[600px] h-[398px] lg:h-[680px] bg-white">
+        <video src={"./video/xochitlvideo1.mp4"} className='w-full h-full object-cover' autoPlay loop muted/>
       </div>
-      <div className="relative max-sm:-mt-10 max-md:-mt-16 max-lg:-mt-32 lg:absolute lg:-top-[230px] right-0 w-full max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-full">
-        <VideoPlayer src={linkVideo} width={680} height={680} />
+      <div className="basis-1/2 lg:basis-full flex justify-start items-center p-10 lg:p-20">
+        <div className="lg:basis-5/12">
+          <TitleCaptionText
+            title={'SIN MIEDO'}
+            title2={'A NADA'}
+            caption={'Xóchitl toda su vida se ha enfrentado y ha luchado contra la desigualdad en México y está aquí para luchar por la gente de México.'}
+            typeTextLink={'arrow'}
+            textLink={'CONOCE A XÓCHITL'}
+            link={'#'}
+          />
+        </div>
       </div>
     </section>
   )
