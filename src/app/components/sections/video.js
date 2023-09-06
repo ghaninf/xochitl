@@ -4,12 +4,12 @@ export default function VideoSection() {
   // const linkVideo = "https://mega.nz/embed/lyt1zBDA#oXLwhWOgNly83QKydaPKcMmlrG2b6UB2twkVms0EkbU!1a1m"
 
   return(
-    <section className="relative w-full lg:h-[667px] flex flex-col lg:flex-row-reverse bg-[color:var(--secondary-color)]">
-      <div className="lg:absolute flex px-2 lg:p-0 -top-10 lg:-top-32 lg:right-20 lg:w-[600px] h-[398px] lg:h-[680px] bg-white">
+    <section className="relative w-full lg:h-[667px] flex flex-col md:flex-row-reverse bg-[color:var(--secondary-color)]">
+      <div className="md:absolute flex px-2 md:p-0 -top-10 md:-top-10 md:right-16 lg:right-20 md:w-[350px] lg:w-[600px] h-[398px] md:h-[400px] lg:h-[680px] bg-white">
         <video src={"./video/xochitlvideo1.mp4"} className='w-full h-full object-cover' autoPlay loop muted/>
       </div>
-      <div className="basis-1/2 lg:basis-full flex justify-start items-center p-10 lg:p-20">
-        <div className="lg:basis-5/12">
+      <div className="basis-1/2 md:basis-full flex justify-start items-center p-10 md:p-20">
+        <div className="md:basis-5/12">
           <TitleCaptionText
             title={'SIN MIEDO'}
             title2={'A NADA'}
