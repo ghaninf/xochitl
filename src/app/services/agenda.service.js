@@ -2,7 +2,7 @@ import axios from "axios";
 
 class AgendaService {
   async getList(data) {
-    const URL = `${process.env.NEXT_PUBLIC_URL}/api/agenda/list`
+    const URL = `${process.env.NEXT_PUBLIC_URL}/api/agenda`
     return axios
       .get(
         URL,
