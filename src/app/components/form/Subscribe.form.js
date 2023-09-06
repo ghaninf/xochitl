@@ -126,7 +126,7 @@ export default function SubscribeForm() {
             typeColor="tertiary"
           />
         </div>
-        <div className={`relative w-[318px] sm:w-[370px] mx-auto ${state.success ? 'hidden' : 'flex'} flex-col gap-[2px] justify-center items-center`}>
+        <div className={`relative ${state.success ? 'hidden' : 'flex'} flex-col gap-[2px] justify-center items-center`}>
           <div className={`relative flex flex-col gap-[2px]`}>
             <label htmlFor='name' className='w-fit font-medium' >Nombre: <span className='text-[#D32F2F]'>*</span></label>
             <input
@@ -170,7 +170,7 @@ export default function SubscribeForm() {
             onClick={onSubmit}
             customClass={'min-w-[318px] mt-4'}
           />
-          <div id="suscribir" onClick={handleClick} className={`relative mt-8 -mr-12 flex flex-row flex-nowrap gap-x-4 cursor-pointer`}>
+          <div id="suscribir" onClick={handleClick} className={`w-[318px] relative mt-8 flex flex-row flex-nowrap gap-x-4 cursor-pointer`}>
             <input type="checkbox" id="myCheck" name="test" required></input>
             <span className="relative w-[324px] text-xs font-light">*Enviando este formulario otorgas tu consentimiento para recibir comunicación relacionada con Xóchitl Gálvez.</span>
           </div>
