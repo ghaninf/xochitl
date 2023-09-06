@@ -7,6 +7,7 @@ import Button from "../Button";
 import { TitleCaptionForm } from ".";
 import { SubscribeService } from "@/app/services";
 import { checkFormIsFill } from "@/app/utils";
+import InputForm from "./InputForm";
 
 export default function SubscribeForm() {
   const [state, setState] = useState({
@@ -128,38 +129,40 @@ export default function SubscribeForm() {
         </div>
         <div className={`relative ${state.success ? 'hidden' : 'flex'} flex-col gap-[2px] justify-center items-center`}>
           <div className={`relative flex flex-col gap-[2px]`}>
-            <label htmlFor='name' className='w-fit font-medium' >Nombre: <span className='text-[#D32F2F]'>*</span></label>
-            <input
-              type='text'
-              id='name'
-              name='name'
-              placeholder={'tu nombre'}
-              value={state.name}
+            <InputForm
+              labelText={'Nombre:'}
+              labelFor={'name'}
+              inputType={'text'}
+              inputId={'name'}
+              inputName={'name'}
+              inputPlaceholder={'tu nombre'}
+              inputValue={state.name}
               onChange={handleChange}
-              className='w-[318px] py-[10px] px-4 border border-transparant text-gray-600'
-              required
             />
             {
               !state.valid.name
-              ? <div className="text-center" >{'Please provide a valid name "John Doe"'}</div>
+              ? <div className="text-center w-[318px]">
+                  <p>{'Please provide a valid name "John Doe"'}</p>
+                </div>
               : ''
             }
           </div>
           <div className="relative flex flex-col gap-[2px]">
-            <label htmlFor='email' className='w-fit font-medium' >Correo electrónico: <span className='text-[#D32F2F]'>*</span></label>
-            <input
-              type='email'
-              id='email'
-              name='email'
-              placeholder={'ejemplo@email.com'}
-              value={state.email}
+            <InputForm
+              labelText={'Correo electrónico:'}
+              labelFor={'email'}
+              inputType={'email'}
+              inputId={'email'}
+              inputName={'email'}
+              inputPlaceholder={'ejemplo@email.com'}
+              inputValue={state.email}
               onChange={handleChange}
-              className='w-[318px] py-[10px] px-4 border border-transparant text-gray-600'
-              required
             />
             {
               !state.valid.email
-              ? <div className="text-center" >{'Please provide a valid email address "example@domain.com"'}</div>
+              ? <div className="text-center w-[318px]">
+                <p>{`Please provide a valid email address "example@domain.com"`}</p>
+              </div>
               : ''
             }
           </div>
