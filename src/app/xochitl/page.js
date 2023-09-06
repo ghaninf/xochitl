@@ -75,7 +75,7 @@ export default function Meets() {
                   <p className="font-appliedSans text-[25px]">{article.excerpt}</p>
                 </div>
                 {article.image ?
-                  <Image src={article.image} alt={article.title} className="relative"/>
+                  <Image src={article.image} alt={article.title} className="relative w-full mt-20"/>
                   :
                   ''
                 }
