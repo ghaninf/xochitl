@@ -14,8 +14,6 @@ export async function GET(req) {
   if (filter) {
     data.filter
   }
-
-  console.log(filter, state, city, page, limit)
  
   return NextResponse
     .json({
