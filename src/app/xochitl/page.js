@@ -48,11 +48,11 @@ export default function Meets() {
     <>
       <Navbar page='xochitl' />
       <main className="relative min-h-screen flex flex-col items-center justify-between">
-        <section className="relative w-full h-[800px] flex flex-row flex-nowrap">
-          <div className="relative bg-secondary w-full min-h-[800px] flex justify-center items-center">
-            <div className="w-2/3 relative flex flex-col gap-10">
-              <h1 className="text-[68.96px] leading-[89.54px] tracking-[4.06px] font-bold text-white font-resolute">CONOCE A XOCHITL</h1>
-              <p className="text-white font-appliedSans text-[22px]"></p>
+        <section className="relative w-full h-screen md:h-[800px] flex flex-col-reverse md:flex-row flex-nowrap">
+          <div className="basis-1/3 md:relative bg-secondary w-full md:min-h-[800px] flex justify-center items-center">
+            <div className="w-3/4 md:w-2/3 h-max relative flex flex-col gap-5 md:gap-10">
+              <h1 className="absolute -top-32 text-4xl md:text-[68.96px] md:leading-[89.54px] md:tracking-[4.06px] font-bold text-white font-resolute">CONOCE A XOCHITL</h1>
+              <p className="text-white font-appliedSans text-base md:text-[22px]">Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.</p>
               <ul className="flex flex-row items-center gap-10">
                 {socMeds.map((socMed, index) => (
                   <li key={index}><Icon {...socMed}/></li>
@@ -60,7 +60,7 @@ export default function Meets() {
               </ul>
             </div>
           </div>
-          <div className="relative bg-gray-500 w-full h-[760px]">
+          <div className="basis-2/3 md:relative bg-gray-500 w-full md:h-[760px]">
             <div className="w-full h-full">
               <Image src={XochitlImage} alt="xochitl-image" className="w-full h-full object-cover"/>
             </div>
