@@ -60,18 +60,18 @@ export default function Meets() {
               </ul>
             </div>
           </div>
-          <div className="basis-2/3 md:basis-1/2 md:relative bg-gray-500 w-full md:h-[760px]">
+          <div className="basis-2/3 md:basis-1/2 md:relative w-full md:h-[760px]">
             <div className="w-full h-full">
               <Image src={XochitlImage} alt="xochitl-image" className="w-full h-full object-cover"/>
             </div>
           </div>
         </section>
-        <section className="relative w-full md:w-10/12 mx-auto min-h-screen bg-gray-300 mt-14 mb-28 box-border">
+        <section className="relative w-full md:w-10/12 mx-auto min-h-screen mt-14 mb-14 box-border">
           <div className="flex flex-col gap-10 md:gap-20">
             {articles.map((article, index) => (
               <article key={index} className="relative">
                 <div className="flex flex-col gap-5 px-10 md:px-20">
-                  <h2 className="font-resolute w-max text-md md:text-[27px] text-[color:var(--secondary-color)] border-b-[color:var(--primary-color)] underline underline-offset-8">{article.title}</h2>
+                  <h2 className="font-resolute lg:w-max text-md md:text-[27px] text-[color:var(--secondary-color)] decoration-[color:var(--primary-color)] underline underline-offset-8 lg:underline-offset-[1rem]">{article.title}</h2>
                   <p className="font-appliedSans text-sm md:text-[25px]">{article.excerpt}</p>
                 </div>
                 {article.image ?
@@ -86,7 +86,7 @@ export default function Meets() {
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer borderStyle="border-t-2 border-[color:var(--secondary-color)]"/>
     </>
   )
 }

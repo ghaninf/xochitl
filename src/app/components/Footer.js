@@ -9,7 +9,7 @@ import DiscordIcon from '../assets/image/socmed/discord.png';
 import Logo from "./Logo";
 import FooterLogo from "./FooterLogo";
 
-export default function Footer () {
+export default function Footer ({borderStyle = ""}) {
   const socMeds = [
     { src: FacebookIcon, width: "w-[10.03px] md:w-[14.18px]", height: "h-[19.11px] md:h-[27.01px]", href: "https://www.facebook.com"},
     { src: TwitterIcon, width: "w-[21.73px] md:w-[30.72px]", height: "h-[17.66px] md:h-[24.96px]", href: "https://www.twitter.com"},
@@ -19,7 +19,7 @@ export default function Footer () {
   ];
 
   return (
-    <footer className="flex flex-col gap-5 md:gap-14 p-10 md:px-20 md:py-10 font-appliedSans">
+    <footer className={`flex flex-col gap-5 md:gap-14 p-10 md:px-20 md:py-10 font-appliedSans ${borderStyle}`}>
       <div className="flex flex-col md:flex-row gap-5">
         <div className="basis-1/2 lg:basis-2/3 flex flex-col gap-5 md:gap-10">
           <div className="w-max">
