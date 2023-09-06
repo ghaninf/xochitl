@@ -21,7 +21,7 @@ export default function EventSection({ data }) {
             <div className="relative flex flex-col gap-y-2 max-w-[400px] text-black">
               {
                 event.status === 'cancel'
-                ? <div className="p-1 font-version font-normal text-white bg-[#DB3921] rounded-md">EVENTO CANCELADO</div>
+                ? <div className="w-fit p-1 font-version font-normal text-white bg-[#DB3921] rounded-md">EVENTO CANCELADO</div>
                 : ''
               }
               <h2 className="font-version text-[21px] tracking-[2px] leading-[200%]">{event.title}</h2>
