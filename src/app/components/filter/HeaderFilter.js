@@ -6,7 +6,7 @@ import IconNext from '../../assets/image/vector-button-next.svg';
 import IconBack from '../../assets/image/vector-button-back.svg';
 
 export default function HeaderFilter({ month, next, prev }) {
-  let currentTime = moment(month);
+  let currentTime = month ? moment(month) : moment().startOf('day');
   currentTime.locale('es-MX');
 
   return(

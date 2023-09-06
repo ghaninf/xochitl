@@ -11,15 +11,20 @@ export default function Events() {
   const [state, setState] = useState({
     data: [],
     filter: {
-      filter: 'FECHA',
-      state: 'TODOS',
-      city: 'TODOS',
+      date: undefined,
+      state: undefined,
+      city: undefined,
       startDate: moment().startOf('month').valueOf(),
       endDate: moment().endOf('month').valueOf()
+    },
+    dataFilter: {
+      date: [ 'Fecha' ],
+      state: [ 'Todos' ],
+      city: [ 'Todos' ]
     }
   })
   const [pagination, setPagination] = useState({
-    page: 1,
+    index: 1,
     limit: 10,
     total: 10
   })
@@ -27,24 +32,66 @@ export default function Events() {
 
   useEffect(() => {
     setLoading(true);
-    AgendaService.getList({ ...state.filter, ...pagination})
-      .then(res => {
+    const promises = [];
+    promises.push(AgendaService.getFilter({ startDate: state.filter.startDate, endDate: state.filter.endDate }))
+    promises.push(AgendaService.getList({ ...state.filter, ...pagination}))
+    Promise.all(promises)
+      .then(values => {
         setState(prev => ({
           ...prev,
-          data: res.data
+          data: values[1].data,
+          dataFilter: {
+            ...prev.dataFilter,
+            state: values[0].state,
+            city: values[0].city,
+            date: values[0].date
+          }
+        }))
+        setPagination(prev => ({
+          ...prev,
+          index: values[1].page.index,
+          total: values[1].page.total
         }))
       })
       .catch(err => {
-        console.log(err)
+        console.error(err)
       })
       .finally(() => {
         setLoading(false);
       })
-  }, [state.filter.filter, state.filter.state, state.filter.city])
+  }, [state.filter.startDate])
 
   useEffect(() => {
+    setLoading(true);
+    AgendaService.getList({ ...state.filter, ...pagination})
+      .then(res => {
+        setState(prev => ({
+          ...prev,
+          data: res.data,
+        }))
+        setPagination(prev => ({
+          ...prev,
+          index: res.page.index,
+          total: res.page.total
+        }))
+      })
+      .catch(err => {
+        console.error(err)
+      })
+      .finally(() => {
+        setLoading(false);
+      })
+  }, [state.filter.date, state.filter.state, state.filter.city])
 
-  }, [pagination.page])
+  const handleChange = (menu, value) => {
+    setState(prev => ({
+      ...prev,
+      filter: {
+        ...prev.filter,
+        [menu]: value
+      }
+    }))
+  }
 
   const handleNext = () => {
     const nextMonth = moment(state.filter.startDate).add(1, 'M')
@@ -80,7 +127,11 @@ export default function Events() {
             next={handleNext}
             prev={handlePrev}
           />
-          <Filter />
+          <Filter
+            values={state.filter}
+            data={state.dataFilter}
+            handleChange={handleChange}
+          />
         </section>
         <EventSection data={state.data} />
         <Icon
