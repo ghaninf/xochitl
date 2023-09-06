@@ -72,7 +72,7 @@ export default function Meets() {
               <article key={index} className="relative">
                 <div className="flex flex-col gap-5 px-10 md:px-20">
                   <h2 className="font-resolute lg:w-max text-md md:text-[27px] text-[color:var(--secondary-color)] decoration-[color:var(--primary-color)] underline underline-offset-8 lg:underline-offset-[1rem]">{article.title}</h2>
-                  <p className="font-appliedSans text-sm md:text-[25px]">{article.excerpt}</p>
+                  <p className="font-appliedSans text-sm md:text-[25px] leading-8">{article.excerpt}</p>
                 </div>
                 {article.image ?
                   <div className="w-11/12 mx-auto md:w-full md:mx-0 mt-10 md:mt-20">
