@@ -10,7 +10,7 @@ export default function Meets() {
 
   return(
     <>
-      <Navbar page='meets' />
+      <Navbar page='xochitl' />
       <main className="relative min-h-screen flex flex-col items-center justify-between">
         <section className="relative w-full h-[800px] flex flex-row flex-nowrap">
           <div className="relative bg-secondary w-full min-h-[800px]">

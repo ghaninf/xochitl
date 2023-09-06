@@ -1,26 +1,18 @@
-'use client'
-
 import moment from "moment"
 require('moment/locale/es-mx');
-import { useEffect, useState } from "react";
 
 import Icon from '../icon/Icon';
 
 import IconClock from '../../assets/image/vector-clock.svg';
 import IconLocation from '../../assets/image/vector-pin-location.svg';
 
-export default function EventSection(props) {
-  const [state, setState] = useState([])
-
-  useEffect(() => {
-    
-  }, [])
+export default function EventSection({ data }) {
 
   const listColor = ['border-red-600', 'border-pink-500', 'border-yellow-500', 'border-blue-600', 'border-sky-500', 'border-green-500']
   return(
     <section className="relative w-full flex flex-col gap-y-5">
       {
-        state?.map((event, key) => (
+        data?.map((event, key) => (
           <div key={key} className={`relative py-6 px-14 flex flex-row flex-nowrap gap-x-20 bg-white drop-shadow-lg border-l-4 ${listColor[key]}`}>
             <div className="relative font-resolute font-secondary text-center">
               <h3 className="text-[65px]">{moment(event.date).locale('es-MX').format('DD')}</h3>
@@ -70,7 +62,15 @@ export default function EventSection(props) {
                     src={IconLocation}
                   />
                 </div>
-                <span>{moment(event.date).locale('es-MX').format('DD, MMM')}</span>
+                <span>
+                  {
+                    event?.location !== ''
+                    ? event.location + ', '
+                    : event.location
+                  }
+                  { event?.city + ' ' || '' }
+                  { event?.state + ' ' || '' }
+                </span>
               </div>
             </div>
           </div>

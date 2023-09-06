@@ -12,7 +12,9 @@
           "timeDescription": ""
         }
       ],
-      "location": "León, Guanajuato",
+      "location": "León",
+      "city": "Guanajuato",
+      "state": "",
       "type": ""
     },
     {
@@ -27,7 +29,9 @@
           "timeDescription": "(tiempo del centro de México)"
         }
       ],
-      "location": "Cámara de Comercio de Guadalajara, Jalisco",
+      "location": "Cámara de Comercio de Guadalajara",
+      "city": "Jalisco",
+      "state": "",
       "type": ""
     },
     {
@@ -47,7 +51,9 @@
           "timeDescription": "horas en el lobby del Centro de Convenciones"
         }
       ],
-      "location": "Aguascalientes",
+      "location": "",
+      "city": "Aguascalientes",
+      "state": "",
       "type": ""
     },
     {
@@ -62,7 +68,9 @@
           "timeDescription": "horas"
         }
       ],
-      "location": "Plaza Miguel Auza de la capital del estado, Zacatecas",
+      "location": "Plaza Miguel Auza de la capital del estado",
+      "city": "Zacatecas",
+      "state": "",
       "type": ""
     }
   ]
