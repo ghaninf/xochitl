@@ -21,6 +21,10 @@ module.exports = {
         resolute: ['var(--font-resolute)'],
         version: ['var(--font-version)'],
         appliedSans: ['var(--font-applied-sans)']
+      },
+      colors: {
+        "primary-color": "var(--primary-color)",
+        "secondary-color": "var(--secondary-color)",
       }
     },
   },
