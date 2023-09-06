@@ -170,9 +170,9 @@ export default function SubscribeForm() {
             onClick={onSubmit}
             customClass={'min-w-[318px] mt-4'}
           />
-          <div id="suscribir" onClick={handleClick} className={`w-[318px] relative mt-8 flex flex-row flex-nowrap gap-x-4 cursor-pointer`}>
+          <div id="suscribir" onClick={handleClick} className={`w-[318px] relative mt-8 flex flex-row items-center md:items-start flex-nowrap gap-x-4 cursor-pointer`}>
             <input type="checkbox" id="myCheck" name="test" required></input>
-            <span className="relative w-[324px] text-xs font-light">*Enviando este formulario otorgas tu consentimiento para recibir comunicación relacionada con Xóchitl Gálvez.</span>
+            <span className="relative w-[324px] text-[7.63px] md:text-xs font-light">*Enviando este formulario otorgas tu consentimiento para recibir comunicación relacionada con Xóchitl Gálvez.</span>
           </div>
         </div>
       </form>
