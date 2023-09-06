@@ -49,9 +49,9 @@ export default function Meets() {
       <Navbar page='xochitl' />
       <main className="relative min-h-screen flex flex-col items-center justify-between">
         <section className="relative w-full h-screen md:h-[800px] flex flex-col-reverse md:flex-row flex-nowrap">
-          <div className="basis-1/3 md:relative bg-secondary w-full md:min-h-[800px] flex justify-center items-center">
+          <div className="basis-1/3 md:basis-1/2 md:relative bg-secondary w-full md:min-h-[800px] flex justify-center items-center">
             <div className="w-3/4 md:w-2/3 h-max relative flex flex-col gap-5 md:gap-10">
-              <h1 className="absolute -top-32 text-4xl md:text-[68.96px] md:leading-[89.54px] md:tracking-[4.06px] font-bold text-white font-resolute">CONOCE A XOCHITL</h1>
+              <h1 className="absolute -top-32 md:relative md:-top-0 text-4xl md:text-[68.96px] md:leading-[89.54px] md:tracking-[4.06px] font-bold text-white font-resolute">CONOCE A XOCHITL</h1>
               <p className="text-white font-appliedSans text-base md:text-[22px]">Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.</p>
               <ul className="flex flex-row items-center gap-10">
                 {socMeds.map((socMed, index) => (
@@ -60,22 +60,24 @@ export default function Meets() {
               </ul>
             </div>
           </div>
-          <div className="basis-2/3 md:relative bg-gray-500 w-full md:h-[760px]">
+          <div className="basis-2/3 md:basis-1/2 md:relative bg-gray-500 w-full md:h-[760px]">
             <div className="w-full h-full">
               <Image src={XochitlImage} alt="xochitl-image" className="w-full h-full object-cover"/>
             </div>
           </div>
         </section>
-        <section className="relative w-10/12 mx-auto min-h-screen bg-gray-300 mt-14 mb-28 box-border">
-          <div className="flex flex-col gap-20">
+        <section className="relative w-full md:w-10/12 mx-auto min-h-screen bg-gray-300 mt-14 mb-28 box-border">
+          <div className="flex flex-col gap-10 md:gap-20">
             {articles.map((article, index) => (
               <article key={index} className="relative">
-                <div className="flex flex-col gap-5 px-20">
-                  <h2 className="font-resolute w-max text-[27px] text-[color:var(--secondary-color)] border-b-4 border-b-[color:var(--primary-color)]">{article.title}</h2>
-                  <p className="font-appliedSans text-[25px]">{article.excerpt}</p>
+                <div className="flex flex-col gap-5 px-10 md:px-20">
+                  <h2 className="font-resolute w-max text-md md:text-[27px] text-[color:var(--secondary-color)] border-b-[color:var(--primary-color)] underline underline-offset-8">{article.title}</h2>
+                  <p className="font-appliedSans text-sm md:text-[25px]">{article.excerpt}</p>
                 </div>
                 {article.image ?
-                  <Image src={article.image} alt={article.title} className="relative w-full mt-20"/>
+                  <div className="w-11/12 mx-auto md:w-full md:mx-0 mt-10 md:mt-20">
+                    <Image src={article.image} alt={article.title} className="w-full object-cover"/>
+                  </div>
                   :
                   ''
                 }
