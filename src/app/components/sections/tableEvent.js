@@ -130,7 +130,7 @@ export default function Events() {
   }
 
   return(
-    <div className='relative min-h-[400px]'>
+    <div className='relative md:min-h-[400px]'>
       <section className="">
         <HeaderFilter
           month={state.filter.startDate}
