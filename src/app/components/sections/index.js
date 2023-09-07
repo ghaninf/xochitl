@@ -7,5 +7,8 @@ export * from './event';
 export { default as ProposalSection } from './proposal';
 export * from './proposal';
 
+export { default as TableEventSection } from './tableEvent';
+export * from './tableEvent';
+
 export { default as VideoSection } from './video';
 export * from './video';
