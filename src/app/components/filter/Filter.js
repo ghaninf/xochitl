@@ -5,9 +5,9 @@ import { Dropdown } from "../form";
 export default function Filter({ values, data, handleChange }) {
 
   return(
-      <div className="relative w-full px-9 py-6 flex flex-row font-appliedSans font-normal font-secondary text-[18px]">
-        <div className="relative flex flex-row gap-x-6 pr-3 items-center border-r-2  border-slate-400">
-          <label htmlFor="">FILTRAR POR:</label>
+      <div className="relative w-full px-0 py-3 md:py-5 flex flex-row gap-x-2 md:gap-x-0 font-appliedSans font-normal font-secondary text-[18px]">
+        <div className="relative flex flex-row gap-x-2 md:gap-x-6 md:pr-3 items-center border-r-2 border-slate-400">
+          <label htmlFor="" className="text-xs md:text-base">FILTRAR POR:</label>
           <Dropdown
             name={'date'}
             value={values.date}
@@ -17,8 +17,8 @@ export default function Filter({ values, data, handleChange }) {
             handleChange={handleChange}
           />
         </div>
-        <div className="flex flex-row gap-x-6 px-6 items-center">
-          <label htmlFor="">ESTADO:</label>
+        <div className="flex flex-row gap-x-2 md:gap-x-6 md:px-6 items-center">
+          <label htmlFor="" className="text-xs md:text-base">ESTADO:</label>
           <Dropdown
             name={'state'}
             value={values.state}
@@ -29,8 +29,8 @@ export default function Filter({ values, data, handleChange }) {
             handleChange={handleChange}
           />
         </div>
-        <div className="flex flex-row gap-x-6 px-6 items-center">
-          <label htmlFor="">MUNICIPIO:</label>
+        <div className="flex flex-row gap-x-2 md:gap-x-6 md:px-6 items-center">
+          <label htmlFor="" className="text-xs md:text-base">MUNICIPIO:</label>
           <Dropdown
             name={'city'}
             value={values.city}
