@@ -6,14 +6,14 @@ import Icon from '../icon/Icon';
 import IconClock from '../../assets/image/vector-clock.svg';
 import IconLocation from '../../assets/image/vector-pin-location.svg';
 
-export default function EventSection({ data }) {
+export default function EventSection({ data, animation }) {
 
   const listColor = ['border-red-600', 'border-pink-500', 'border-yellow-500', 'border-blue-600', 'border-sky-500', 'border-green-500']
   return(
-    <section className="relative w-full flex flex-col gap-y-5">
+    <section className={`relative w-full flex flex-col gap-y-5 ease-in-out duration-300 ${animation}`}>
       {
         data?.map((event, key) => (
-          <div key={key} className={`relative py-6 px-14 flex flex-row flex-nowrap gap-x-20 bg-white drop-shadow-lg border-l-4 ${listColor[key]}`}>
+          <div key={key} className={`relative mb-2 mr-2 py-6 px-14 flex flex-row flex-nowrap gap-x-20 bg-white shadow-[6.31px_6.31px_2.1px_1.05px_rgba(0,0,0,0.12)] border-l-4 ${listColor[key]}`}>
             <div className="relative font-resolute font-secondary text-center">
               <h3 className="text-[65px]">{moment(event.date).locale('es-MX').format('DD')}</h3>
               <h4 className="absolute top-[72px] left-1/2 -translate-x-1/2 text-[21px]">{moment(event.date).locale('es-MX').format('MMM').toUpperCase().replace('.', '')}</h4>
