@@ -5,10 +5,14 @@ import { generateContentItem } from "../utils";
 import { metaData } from "../metaData";
 
 import XochitlImage from '../assets/image/banner-image-2.png';
-import ShareIcon from '../assets/image/socmed/share-white-fill.png';
-import FacebookIcon from '../assets/image/socmed/facebook-white-fill.png';
-import TwitterIcon from '../assets/image/socmed/twitter-white-fill.png';
-import InstagramIcon from '../assets/image/socmed/instagram-white-fill.png';
+// import ShareIcon from '../assets/image/socmed/share-white-fill.png';
+// import FacebookIcon from '../assets/image/socmed/facebook-white-fill.png';
+// import TwitterIcon from '../assets/image/socmed/twitter-white-fill.png';
+// import InstagramIcon from '../assets/image/socmed/instagram-white-fill.png';
+import ShareIcon from '../assets/image/socmed/share-outline.svg';
+import FacebookIcon from '../assets/image/socmed/facebook-fill.svg';
+import TwitterIcon from '../assets/image/socmed/twitter-fill.svg';
+import InstagramIcon from '../assets/image/socmed/instagram-fill.svg';
 import VidaPersonal from '../assets/image/vida-personal.png';
 import ConoceImage from '../assets/image/text/image-conoce-xochitl.webp';
 
@@ -19,10 +23,10 @@ export async function generateMetadata() {
 
 export default async function Meets() {
   const socMeds = [
-    { src: ShareIcon, title: "share-icon", width: 24, height: 24 },
-    { src: FacebookIcon, title: "facebook-icon", width: 11.57, height: 22.03 },
-    { src: TwitterIcon, title: "twitter-icon", width: 25.05, height: 20.36 },
-    { src: InstagramIcon, title: "instagram-icon", width: 22.03, height: 22.03 },
+    { src: ShareIcon, title: "share-icon", href: "https://www.facebook.com"},
+    { src: FacebookIcon, title: "facebook-icon", href: "https://www.facebook.com"},
+    { src: TwitterIcon, title: "twitter-icon", href: "https://www.twitter.com"},
+    { src: InstagramIcon, title: "instagram-icon", href: "https://www.instagram.com"},
   ];
 
   const content = [
@@ -83,7 +87,7 @@ export default async function Meets() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-white font-appliedSans text-base md:text-[22px]">Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.</p>
+              <p className="text-white font-appliedSans leading-[25.9px] md:leading-[33.9px] text-base md:text-[22px]">Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.</p>
               <ul className="flex flex-row items-center gap-10">
                 {socMeds.map((socMed, index) => (
                   <li key={index}><Icon {...socMed}/></li>
@@ -97,7 +101,7 @@ export default async function Meets() {
             </div>
           </div>
         </section>
-        <section className="relative w-full lg:w-10/12 mx-auto min-h-screen mt-14 mb-14 box-border">
+        <section className="relative w-full lg:w-9/12 mx-auto min-h-screen mt-14 mb-14 box-border">
           <div className="flex flex-col gap-10 md:gap-20">
             {content.map((item, index) => generateContentItem(item, index))}
           </div>
