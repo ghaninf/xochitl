@@ -6,11 +6,13 @@ export default function Logo ({
   src,
   width = "min-w-[86px] md:min-w-[160px]",
   height = "min-h-[31px] md:min-h-[57px]",
-  href = '/'
+  href = '/',
+  target = '',
+  rel=""
 }) {
 
   return(
-    <Link href={href} className="" >
+    <Link href={href} target={target} rel={rel} className="" >
       <div className={`relative ${width} ${height}`}>
         <Image
           fill
