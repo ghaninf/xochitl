@@ -127,7 +127,7 @@ export default function SubscribeForm() {
         caption={'Xóchitl Gálvez conoce los desafíos que se enfrentan los mexicanos todos los días y tiene las soluciones que México necesita para un futuro sin límites.'}
         textLink={'CONOCER MÁS'}
         typeTextLink={'arrow'}
-        link={'#'}
+        link={'/xochitl'}
       />
       <iframe src="https://embeds.beehiiv.com/67fc9a16-0c1c-47c3-8b99-8b3a3d577e6e" data-test-id="beehiiv-embed" width="100%" height="320" style={{ border: 'none', margin: 0, backgroundColor: 'transparent' }}></iframe>
       {/* <form className="relative mt-12 sm:mt-16 md:mt-[90px] font-white" onSubmit={onSubmit}>
