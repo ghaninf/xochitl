@@ -12,9 +12,9 @@ export default function Events() {
   const [state, setState] = useState({
     data: [],
     filter: {
-      date: undefined,
-      state: undefined,
-      city: undefined,
+      date: '',
+      state: '',
+      city: '',
       startDate: moment().startOf('month').valueOf(),
       endDate: moment().endOf('month').valueOf()
     },
@@ -22,7 +22,8 @@ export default function Events() {
       date: [ 'Fecha' ],
       state: [ 'Todos' ],
       city: [ 'Todos' ]
-    }
+    },
+    animateHeader: '',
   })
   const [pagination, setPagination] = useState({
     index: 1,
@@ -32,7 +33,7 @@ export default function Events() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(state.animateHeader);
     const promises = [];
     promises.push(AgendaService.getFilter({ startDate: state.filter.startDate, endDate: state.filter.endDate }))
     promises.push(AgendaService.getList({ ...state.filter, ...pagination}))
@@ -58,12 +59,16 @@ export default function Events() {
         console.error(err)
       })
       .finally(() => {
-        setLoading(false);
+        if (state.animateHeader === 'animate-hide-to-left') {
+          setLoading('animate-show-to-left');
+        } else {
+          setLoading('animate-show-to-right');
+        }
       })
   }, [state.filter.startDate])
 
   useEffect(() => {
-    setLoading(true);
+    setLoading('animate-to-bottom');
     AgendaService.getList({ ...state.filter, ...pagination})
       .then(res => {
         setState(prev => ({
@@ -80,7 +85,7 @@ export default function Events() {
         console.error(err)
       })
       .finally(() => {
-        setLoading(false);
+        setLoading('animate-from-top');
       })
   }, [state.filter.date, state.filter.state, state.filter.city])
 
@@ -90,7 +95,8 @@ export default function Events() {
       filter: {
         ...prev.filter,
         [menu]: value
-      }
+      },
+      animateHeader: ''
     }))
   }
 
@@ -102,7 +108,8 @@ export default function Events() {
         ...prev.filter,
         startDate: nextMonth.startOf('month').valueOf(),
         endDate: nextMonth.endOf('month').valueOf()
-      }
+      },
+      animateHeader: 'animate-hide-to-left',
     }))
   }
 
@@ -114,7 +121,8 @@ export default function Events() {
         ...prev.filter,
         startDate: nextMonth.startOf('month').valueOf(),
         endDate: nextMonth.endOf('month').valueOf()
-      }
+      },
+      animateHeader: 'animate-hide-to-right',
     }))
   }
 
@@ -134,7 +142,9 @@ export default function Events() {
             handleChange={handleChange}
           />
         </section>
-        <EventSection data={state.data} />
+        <div className={`relative ease-in-out duration-300 ${loading}`}>
+          <EventSection data={state.data} />
+        </div>
         <Icon
           additionalCSS={'fixed bottom-0 right-0 '}
           title={'xochitl watermark'}

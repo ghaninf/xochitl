@@ -4,9 +4,9 @@ import moment from 'moment';
 
 export async function GET(req) {
   const filter = {
-    date: [],
-    state: [],
-    city: []
+    date: [ 'fecha' ],
+    state: [ 'todos' ],
+    city: [ 'todos' ]
   }
 
   let data = agenda.agenda
@@ -20,10 +20,10 @@ export async function GET(req) {
   }
   
   data.forEach(event => {
-    if (!filter.state.includes(event.state)) {
+    if (!filter.state.includes(event.state) && event.state !== '') {
       filter.state.push(event.state);
     }
-    if (!filter.city.includes(event.city)) {
+    if (!filter.city.includes(event.city) && event.city !== '') {
       filter.city.push(event.city);
     }
     if (!filter.date.includes(event.date)) {

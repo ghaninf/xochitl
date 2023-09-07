@@ -1,16 +1,108 @@
-.group:hover .group-hover\:animate-arrow,
-.animate-arrow {
-  animation: arrow-move 0.8s infinite;
+.group:hover .group-hover\:animate-hide-to-left,
+.animate-hide-to-left {
+  animation: table-hide-to-left 0.3s forwards;
 }
 
-@keyframes arrow-move {
-  0%, 100% {
+@keyframes table-hide-to-left {
+  0% {
+    opacity: 1;
     transform: translateX(0%);
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
-  50% {
+  100% {
+    opacity: 0;
+    transform: translateX(-40%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+
+.group:hover .group-hover\:animate-hide-to-right,
+.animate-hide-to-right {
+  animation: table-hide-to-right 0.3s forwards;
+}
+
+@keyframes table-hide-to-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  100% {
+    opacity: 0;
     transform: translateX(40%);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+
+.group:hover .group-hover\:animate-show-to-left,
+.animate-show-to-left {
+  animation: table-show-to-left 0.3s forwards;
+}
+
+@keyframes table-show-to-left {
+  0% {
+    opacity: 0;
+    transform: translateX(40%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+
+.group:hover .group-hover\:animate-show-to-right,
+.animate-show-to-right {
+  animation: table-show-to-right 0.3s forwards;
+}
+
+@keyframes table-show-to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+
+.group:hover .group-hover\:animate-from-top,
+.animate-from-top {
+  animation: table-from-top 0.3s forwards;
+}
+
+@keyframes table-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+    animation-timing-function: cubic-bezier(0, 0.8, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    animation-timing-function: cubic-bezier(0, 0.8, 1, 1);
+  }
+}
+
+.group:hover .group-hover\:animate-to-bottom,
+.animate-to-bottom {
+  animation: table-to-bottom 0.3s forwards;
+}
+
+@keyframes table-to-bottom {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+    animation-timing-function: cubic-bezier(0, 0.8, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40%);
+    animation-timing-function: cubic-bezier(0, 0.8, 1, 1);
   }
 }
 
