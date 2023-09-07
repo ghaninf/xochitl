@@ -22,32 +22,32 @@ export default function Meets() {
   const content = [
     {
       type: 'article',
-      title: "UNA VIDA DE COMPROMISO SOCIAL Y TECNOLOGICO",
+      title: "Una vida de compromiso social y tecnológico",
       excerpt: 'Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.'
     },
     {
       type: 'article',
-      title: "ORIGENES Y EDUCACION",
+      title: "Orígenes y Educación",
       excerpt: 'Nación en 1964 en Pachuca, Hidalgo, Xóchitl es de ascendencia otomí. Su origen indígena ha influido profundamente en su visión del mundo y en su compromiso con los derechos humanos y el bienestar de los pueblos indígenas de México. Para trasladarse a su escuela debía trasladarse todos los días y para costear sus estudios vendía gelatinas en el mercado de su pueblo. Xóchitl es ingeniera en sistemas computacionales por el Universidad Nacional Autónoma de México Politécnico Nacional (UNAM) y y posteriormente se especializó en robótica, inteligencia artificial, edificios inteligentes, sustentabilidad y ahorro de energía.'
     },
     {
       type: 'article',
-      title: "TRAYECTORIA EN EL SECTOR PRIVADO",
+      title: "Trayectoria en el Sector Privado",
       excerpt: 'Xóchitl comenzó su vida laboral como programadora y continuó desempeñándose c con éxito en el ámbito de las tecnologías de la información. Fundó empresas enfocadas en ofrecer servicios informáticos y digitales, consolidando su reputación como una de las mujeres más influyentes en el sector tecnológico mexicano.'
     },
     {
       type: 'quote',
-      quote: `"TENGO UN ENFOQUE DISTINTO PARA MEXICO, CON IDEAS MAS FRESCAS ENCAMINADAS HACIA UN MEXICO SIN LIMITES."`,
-      author: 'XOCHITL GALVEZ'
+      quote: `¨Tengo un enfoque distinto para México, con ideas más frescas encaminadas hacia un México sin límites.¨`,
+      author: 'Xóchitl Gálvez'
     },
     {
       type: 'article',
-      title: "COMPROMISO SOCIAL",
+      title: "Compromiso Social",
       excerpt: 'A inicios del siglo XXI, su camino tomó un giro hacia el servicio público. Iniciando en la dirección de la Comisión Nacional para el Desarrollo de los Pueblos Indígenas (CDI). Desde este cargo, impulsó proyectos que buscaban mejorar las condiciones de vida de las comunidades indígenas, reconociendo y promoviendo sus derechos y cultura. Posteriormente, ha ocupado diversos cargos públicos, incluyendo fungir como Jefa Delegacional de la Miguel Hidalgo en la Ciudad de México y Senadora de la República. En cada puesto ha buscado combinar su experiencia académica con su compromiso social, generando proyectos que integren la modernización con la inclusión y justicia buscando un México justo y sin límites.'
     },
     {
       type: 'article',
-      title: "VIDA PERSONAL",
+      title: "Vida Personal",
       excerpt: 'Aunque no están casados, Xóchitl y Rubén Sánchez se dicen esposos y juntos tienen dos hijos Diana y Juan Pablo. Le va al Club de Fútbol Cruz Azul y es una fanática del ciclismo.',
     },
     {
@@ -56,7 +56,7 @@ export default function Meets() {
     },
     {
       type: 'article',
-      title: "VISION",
+      title: "Visión",
       excerpt: 'Xóchitl es un claro ejemplo de que la combinación de pasión, educación y compromiso pueden generar transformaciones positivas. A través de su carrera, ha demostrado que es posible unir mundos aparentemente opuestos, como la tecnología y la tradición, para construir un México más justo e incluyente.Su historia es una inspiración para las nuevas generaciones, mostrando que con determinación y amor por lo que se hace, es posible dejar una huella profunda en la sociedad.'
     },
   ];
