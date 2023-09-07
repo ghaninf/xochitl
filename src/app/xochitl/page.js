@@ -1,12 +1,14 @@
 import Image from "next/image";
+import { Icon, Navbar } from "../components";
+import Footer from "../components/Footer";
+
 import XochitlImage from '../assets/image/banner-image-2.png';
 import ShareIcon from '../assets/image/socmed/share-white-fill.png';
 import FacebookIcon from '../assets/image/socmed/facebook-white-fill.png';
 import TwitterIcon from '../assets/image/socmed/twitter-white-fill.png';
 import InstagramIcon from '../assets/image/socmed/instagram-white-fill.png';
 import VidaPersonal from '../assets/image/vida-personal.png';
-import { Icon, Navbar } from "../components";
-import Footer from "../components/Footer";
+import ConoceImage from '../assets/image/text/image-conoce-xochitl.webp';
 
 export default function Meets() {
   const socMeds = [
@@ -51,7 +53,15 @@ export default function Meets() {
         <section className="relative w-full h-screen md:h-[800px] flex flex-col-reverse md:flex-row flex-nowrap">
           <div className="basis-1/3 md:basis-1/2 md:relative bg-secondary w-full md:min-h-[800px] flex justify-center items-center">
             <div className="w-3/4 md:w-2/3 h-max relative flex flex-col gap-5 md:gap-10">
-              <h1 className="absolute -top-32 md:relative md:-top-0 text-4xl md:text-[68.96px] md:leading-[89.54px] md:tracking-[4.06px] font-bold text-white font-resolute">CONOCE A XOCHITL</h1>
+              <div className="relative w-[360px] h-[180px]">
+                <Image
+                  fill
+                  sizes="100%"
+                  alt="Conoce a Xochitl"
+                  src={ConoceImage}
+                  className="object-contain"
+                />
+              </div>
               <p className="text-white font-appliedSans text-base md:text-[22px]">Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.</p>
               <ul className="flex flex-row items-center gap-10">
                 {socMeds.map((socMed, index) => (

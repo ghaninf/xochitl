@@ -9,6 +9,9 @@ import { SubscribeService } from "@/app/services";
 import { checkFormIsFill } from "@/app/utils";
 import InputForm from "./InputForm";
 
+import Laexperanza from '../../assets/image/text/image-la-experanza.webp';
+import Image from "next/image";
+
 export default function SubscribeForm() {
   const [state, setState] = useState({
     input: {
@@ -107,10 +110,20 @@ export default function SubscribeForm() {
   }
 
   return(
-    <div id="subscribe-section" className="relative lg:absolute lg:-top-[104px] w-full max-w-full lg:max-w-[calc(50%+20px)] bg-secondary pt-6 pb-16 px-8 sm:pb-20 sm:pt-10 sm:px-16 lg:py-16 xl:py-[82px] lg:pl-[140px] lg:pr-[88px] box-border z-10">
+    <div id="subscribe-section" className="relative lg:absolute lg:-top-[104px] w-full max-w-full lg:max-w-[calc(50%+20px)] bg-secondary pt-6 pb-16 sm:pb-20 sm:pt-10 lg:py-16 xl:py-[82px] px-8 sm:px-16 lg:pl-24 xl:pl-[140px] lg:pr-20 xl:pr-[88px] box-border z-10">
       <p>{state?.errorMessage}</p>
       <TitleCaptionForm
-        title={'LA EXPERANZA DE MÉXICO'}
+        title={
+          <div className="relative w-full max-w-sm lg:max-w-[400px] h-5 sm:h-7 lg:h-[30px]">
+            <Image
+              fill
+              sizes="100%"
+              alt={'La Experanza De Mexico'}
+              src={Laexperanza}
+              className={'object-cover'}
+            />
+          </div>
+        }
         caption={'Xóchitl Gálvez conoce los desafíos que se enfrentan los mexicanos todos los días y tiene las soluciones que México necesita para un futuro sin límites.'}
         textLink={'CONOCER MÁS'}
         typeTextLink={'arrow'}
@@ -179,7 +192,6 @@ export default function SubscribeForm() {
           </div>
         </div>
       </form>
-      <Script async type="text/javascript" src="https://embeds.beehiiv.com/attribution.js" />
     </div>
   )
 }
