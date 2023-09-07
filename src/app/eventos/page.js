@@ -129,8 +129,8 @@ export default function Events() {
   return(
     <>
       <Navbar page={'eventos'} />
-      <main className="relative min-h-screen mt-[90px] px-40 py-16 flex flex-col">
-        <section className="">
+      <main className="relative min-h-screen mt-[90px] px-5 md:px-10 lg:px-40 py-16 flex flex-col">
+        <section className="bg-blue-200">
           <HeaderFilter
             month={state.filter.startDate}
             next={handleNext}
