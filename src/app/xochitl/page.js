@@ -97,7 +97,7 @@ export default async function Meets() {
             </div>
           </div>
         </section>
-        <section className="relative w-full lg:w-10/12 mx-auto min-h-screen mt-14 mb-14 box-border">
+        <section className="relative w-full lg:w-9/12 mx-auto min-h-screen mt-14 mb-14 box-border">
           <div className="flex flex-col gap-10 md:gap-20">
             {content.map((item, index) => generateContentItem(item, index))}
           </div>
