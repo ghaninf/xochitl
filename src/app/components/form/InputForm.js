@@ -10,7 +10,7 @@ export default function InputForm ({
 }) {
   return (
     <>
-      <label htmlFor={labelFor} className='w-fit font-medium' >{labelText} <span className='text-[#D32F2F]'>*</span></label>
+      <label htmlFor={labelFor} className='w-fit font-normal font-appliedSans leading-5 ' >{labelText}</label>
       <input
         type={inputType}
         id={inputId}

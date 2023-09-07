@@ -1,11 +1,14 @@
 'use client'
 
 import { useState } from "react";
+import Link from "next/link";
 
 import Icon from "../icon/Icon";
-import { ArrowText } from "../text";
 import { handleRichText } from "../../utils";
+
 import IconExpand from '../../assets/image/vector-expand.svg';
+import ArrowBlue from '../../assets/image/vector-arrow-blue.svg';
+
 
 export default function ProposalSection() {
   const menu = {
@@ -26,12 +29,12 @@ export default function ProposalSection() {
   const [active, setActive] = useState('');
 
   return(
-    <section className="relative w-full h-auto 2xl:px-[22%] xl:px-44 lg:px-28 md:px-20 px-16 lg:py-40 py-20">
+    <section className="relative w-full h-auto 2xl:px-[22%] xl:px-44 lg:px-28 md:px-20 px-16 py-20 lg:py-24 ">
       <div className="relative w-full max-w-[550px]">
         <h1 id="font-secondary" className="text-4xl lg:text-[55px] font-resolute tracking-[2px] leading-loose">PROPUESTAS</h1>
-        <h4 className="text-black font-appliedSans text-sm lg:text-[18px] leading-[160%]">Xóchitl sabe los desafíos y obstáculos que los Mexicanos se enfrentan al querer superarse. Reconoce que la historia no ha sido justa con México y por eso propone una agenda enfocada en impulsar a México y a los mexicanos hacia un futuro más justo, verde y sin límites.</h4>
+        <h4 className="text-black font-appliedSans text-sm lg:text-[18px] font-normal leading-[160%]">Xóchitl sabe los desafíos y obstáculos que los Mexicanos se enfrentan al querer superarse. <br/> Reconoce que la historia no ha sido justa con México y por eso propone una agenda enfocada en impulsar a México y a los mexicanos hacia un futuro más justo, verde y sin límites.</h4>
       </div>
-      <article className="relative flex flex-col md:flex-row gap-8 md:gap-20 lg:gap-40 justify-center font-secondary font-appliedSans text-sm sm:text-xl lg:text-[30px] font-normal max-lg:mt-10">
+      <article className="relative flex flex-col md:flex-row gap-8 md:gap-20 lg:gap-40 justify-center font-secondary font-appliedSans text-sm sm:text-xl lg:text-[30px] font-normal leading-[53.5px] tracking-[1px] max-lg:mt-10">
         <ul className="relative w-full flex flex-col gap-y-8 lg:mt-16 max-sm:max-w-full max-w-[476px]" >
           {
             menu.menu1.map((el, key) => (
@@ -44,7 +47,7 @@ export default function ProposalSection() {
                     title={'Xóchitlnomics'}
                     additionalCSS={`max-h-3 lg:max-h-4 max-w-[8px] lg:max-w-[11px] ease-in-out duration-200 ${el.id === active ? 'rotate-90' : ''}`}
                   />
-                  <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
+                  <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
                 <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-auto mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
                   {handleRichText(el.description)}
@@ -65,7 +68,7 @@ export default function ProposalSection() {
                     title={'Xóchitlnomics'}
                     additionalCSS={`max-h-3 lg:max-h-4 max-w-[8px] lg:max-w-[11px] ${el.id === active ? 'rotate-90' : ''}`}
                   />
-                  <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
+                  <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
                 <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-auto mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
                   {handleRichText(el.description)}
@@ -73,7 +76,21 @@ export default function ProposalSection() {
               </li>
             ))
           }
-          <ArrowText
+          <div className="relative mt-12 group w-fit pb-1 box-border cursor-pointer before:w-full before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:scale-x-100">
+            <Link href={'/eventos'} className={`relative max-w-fit font-version font-normal leading-[53.5px] tracking-[1px] flex flex-row gap-x-4 items-center text-secondary-color text-lg md:text-xl lg:text-[27px]`} >
+              VER TODAS
+              <div className={`relative w-fit h-fit`} >
+                <Icon
+                  title={'VER TODAS'}
+                  width={28}
+                  height={22}
+                  src={ArrowBlue}
+                  additionalCSS={'w-[28px] h-[22.5px]'}
+                />
+              </div>
+            </Link>
+          </div>
+          {/* <ArrowText
             title={'VER TODAS'}
             color={'font-secondary'}
             arrowColor={'blue'}
@@ -81,7 +98,7 @@ export default function ProposalSection() {
             width={30}
             height={24}
             additionalClass={'mt-4 md:mt-20 lg:mt-28 text-sm lg:text-[30px]'}
-          />
+          /> */}
         </ul>
       </article>
     </section>

@@ -13,7 +13,7 @@
   --button-hover-color: #E13739;
   --button-active-color: #BB3239;
 }
-
+html {scroll-behavior: smooth}
 body {
   background: #ffffff;
 }

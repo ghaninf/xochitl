@@ -12,7 +12,7 @@ export default function TitleCaption({ title, caption, textLink, typeTextLink, l
   return(
     <div className="relative flex flex-col gap-y-[10px] font-white">
       <h2 className="font-resolute tracking-[1px] leading-normal font-normal text-lg lg:text-[25px]">{title}</h2>
-      <h4 className="text-base lg:text-[18px]">{caption}</h4>
+      <h4 className="text-lg lg:text-[21px]">{caption}</h4>
       <div className="mt-4">
         {listType[typeTextLink]}
       </div>
