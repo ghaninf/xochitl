@@ -129,7 +129,8 @@ export default function SubscribeForm() {
         typeTextLink={'arrow'}
         link={'#'}
       />
-      <form className="relative mt-12 sm:mt-16 md:mt-[90px] font-white" onSubmit={onSubmit}>
+      <iframe src="https://embeds.beehiiv.com/67fc9a16-0c1c-47c3-8b99-8b3a3d577e6e" data-test-id="beehiiv-embed" width="100%" height="320" style={{ border: 'none', margin: 0, backgroundColor: 'transparent' }}></iframe>
+      {/* <form className="relative mt-12 sm:mt-16 md:mt-[90px] font-white" onSubmit={onSubmit}>
         <h2 className="mb-4 text-[22px] tracking-[1.32px] text-center">HAGAMOS ESTO JUNTOS</h2>
         <div className={`relative w-[318px] sm:w-[370px] mx-auto ${state.success ? 'flex' : 'hidden'} flex-col gap-[2px] justify-center items-center`}>
           <h4 className="text-center">You have been subscribe</h4>
@@ -191,7 +192,7 @@ export default function SubscribeForm() {
             <span className="relative w-[324px] text-[7.63px] md:text-xs font-light">*Enviando este formulario otorgas tu consentimiento para recibir comunicación relacionada con Xóchitl Gálvez.</span>
           </div>
         </div>
-      </form>
+      </form> */}
     </div>
   )
 }
