@@ -83,7 +83,7 @@ export default async function Meets() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-white font-appliedSans text-base md:text-[22px]">Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.</p>
+              <p className="text-white font-appliedSans leading-[25.9px] md:leading-[33.9px] text-base md:text-[22px]">Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.</p>
               <ul className="flex flex-row items-center gap-10">
                 {socMeds.map((socMed, index) => (
                   <li key={index}><Icon {...socMed}/></li>
