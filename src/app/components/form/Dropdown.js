@@ -32,7 +32,7 @@ export default function Dropdown({ name, value, placeholder, data, isDate, arrow
 
   return(
     <div className="relative">
-      <button onClick={() => setState(prev => !prev)} className={`p-2 font-medium text-center inline-flex items-center uppercase gap-x-2 ${customClassButton || ''}`} type="button">
+      <button onClick={() => setState(prev => !prev)} className={`p-0 md:p-2 font-medium text-center inline-flex items-center uppercase gap-x-2 ${customClassButton || ''} text-xs md:text-base`} type="button">
         { typeValue(value) }
         <Icon
           src={IconDropDown}
