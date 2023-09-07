@@ -13,7 +13,7 @@ export default async function Events() {
   return(
     <>
       <Navbar page={'eventos'} />
-      <main className="relative min-h-screen mt-[90px] px-40 py-16 flex flex-col">
+      <main className="relative min-h-screen mt-[90px] px-5 md:px-20 lg:px-40 py-16 flex flex-col">
         <TableEventSection />
         <div className='absolute bottom-0 right-0'>
           <Icon
