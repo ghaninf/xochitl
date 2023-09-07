@@ -47,7 +47,7 @@ export default function Footer ({borderStyle = ""}) {
               height="h-[73.75px] md:h-[131.57px]"
             />
           </div>
-          <ul className="flex flex-col font-appliedSans justify-start items-end gap-9 leading-6 tracking-[1px] text-lg md:text-xl">
+          <ul className="flex flex-col font-appliedSans justify-start items-start md:items-end gap-2 md:gap-9 leading-6 tracking-[1px] text-sm md:text-xl">
             <li><Link href="https://www.xochitl.io/policies/privacy-policy" target="_blank" rel="noopener">Política de Privacidad</Link></li>
             <li><Link href="https://www.xochitl.io/policies/terms-of-service" target="_blank" rel="noopener">Términos y Condiciones</Link></li>
             <li><Link href="https://www.xochitl.io/pages/contacto" target="_blank" rel="noopener">Contacto</Link></li>
