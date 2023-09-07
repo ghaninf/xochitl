@@ -46,7 +46,7 @@ export default function ProposalSection() {
                   />
                   <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
-                <div className={`${el.id === active ? 'scale-100 h-auto' : 'h-0 scale-y-0'} relative mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
+                <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-auto mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
                   {handleRichText(el.description)}
                 </div>
               </li>
@@ -67,7 +67,7 @@ export default function ProposalSection() {
                   />
                   <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
-                <div className={`${el.id === active ? 'scale-100 h-auto' : 'h-0 scale-y-0'} relative mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
+                <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-auto mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
                   {handleRichText(el.description)}
                 </div>
               </li>
