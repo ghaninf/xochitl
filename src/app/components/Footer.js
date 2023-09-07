@@ -32,7 +32,7 @@ export default function Footer ({borderStyle = ""}) {
               height="h-[48.25px] md:h-[80.06px]"
             />
           </div>
-          <ul className="flex flex-col gap-5 text-sm md:text-[18px]">
+          <ul className="flex flex-col gap-5 md:gap-10 text-sm md:text-[18px]">
             <li><Link href="/xochitl" className="font-bold text-[color:var(--secondary-color)]">XÓCHITL</Link></li>
             <li><Link href="/propuestas" className="font-bold text-[color:var(--secondary-color)]">PROPUESTAS</Link></li>
             <li><Link href="/eventos" className="font-bold text-[color:var(--secondary-color)]">EVENTOS</Link></li>
