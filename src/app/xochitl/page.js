@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Icon, Navbar } from "../components";
 import Footer from "../components/Footer";
+import { generateContentItem } from "../utils";
+import { metaData } from "../metaData";
 
 import XochitlImage from '../assets/image/banner-image-2.png';
 import ShareIcon from '../assets/image/socmed/share-white-fill.png';
@@ -9,9 +11,13 @@ import TwitterIcon from '../assets/image/socmed/twitter-white-fill.png';
 import InstagramIcon from '../assets/image/socmed/instagram-white-fill.png';
 import VidaPersonal from '../assets/image/vida-personal.png';
 import ConoceImage from '../assets/image/text/image-conoce-xochitl.webp';
-import { generateContentItem } from "../utils";
 
-export default function Meets() {
+
+export async function generateMetadata() {
+  return await metaData('xochitl')
+}
+
+export default async function Meets() {
   const socMeds = [
     { src: ShareIcon, title: "share-icon", width: 24, height: 24 },
     { src: FacebookIcon, title: "facebook-icon", width: 11.57, height: 22.03 },

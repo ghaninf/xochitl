@@ -37,13 +37,13 @@ export default function Hamburger({ page }) {
       {
         popup
         ? <div className='absolute top-0 left-0 right-0 w-full min-h-screen bg-secondary z-40 pt-4'>
-            <ul className='relative w-full flex flex-col gap-y-10 justify-center items-center font-resolute text-white lg:hidden'>
+            <ul className='relative w-full flex flex-col gap-y-12 justify-center items-center text-[16px] font-medium tracking-widest font-resolute text-white lg:hidden'>
               <Logo src={LogoWhite} />
               <li className='relative w-fit pb-1 border-b border-pink-600 cursor-pointer' onClick={() => navigateTo('/xochitl')} >XÓCHITL</li>
               <li className='relative w-fit pb-1 border-b border-pink-600 cursor-pointer' onClick={() => navigateTo('/eventos')} >AGENDA</li>
               <li className='relative w-fit pb-1 border-b border-pink-600 cursor-pointer' onClick={() => navigateTo('/propuestas')} >PROPUESTAS</li>
               <li className='relative w-fit pb-1 border-b border-pink-600 cursor-pointer' onClick={() => openTab('https://xochitl.io')} >TIENDA</li>
-              <label onClick={() => setPopup(false)} htmlFor='menu-toggle'>
+              <label onClick={() => setPopup(false)} htmlFor='menu-toggle' className='mt-12'>
                 <Button
                   href={'/#subscribe-section'}
                   typeButton="link"

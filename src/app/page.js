@@ -1,8 +1,12 @@
 import { BannerImage, Button, Navbar, ProposalSection, SubscribeForm, VideoSection } from "./components";
 import Footer from "./components/Footer";
+import { metaData } from "./metaData";
 
+export async function generateMetadata() {
+  return await metaData('homepage')
+}
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Navbar page={'/'} />

@@ -17,11 +17,6 @@ const AppliedSansPro = localFont({
   variable: '--font-applied-sans'
 })
 
-export const metadata = {
-  title: 'Xóchitl Gálvez',
-  description: 'Juntos por un México sin límites',
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang="es_MX">
