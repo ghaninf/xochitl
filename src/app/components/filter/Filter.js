@@ -5,9 +5,9 @@ import { Dropdown } from "../form";
 export default function Filter({ values, data, handleChange }) {
 
   return(
-      <div className="relative w-full px-0 py-3 md:py-5 flex flex-row justify-evenly font-appliedSans font-normal font-secondary text-[10px] md:text-base">
+      <div className="relative w-full px-0 py-3 md:py-5 flex flex-row justify-evenly md:justify-normal font-appliedSans font-normal font-secondary text-[10px] md:text-base">
         <div className="relative flex flex-row gap-x-2 md:gap-x-6 pr-3 md:pr-3 items-center border-r-2 border-slate-400">
-          <label htmlFor="" className="text-[10px] md:text-base">FILTRAR POR:</label>
+          <label htmlFor="" className="text-[10px] md:text-base font-semibold">FILTRAR POR:</label>
           <Dropdown
             name={'date'}
             value={values.date}
