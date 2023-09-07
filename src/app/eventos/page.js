@@ -6,6 +6,7 @@ import Watermark from '../assets/image/vector-watermark.svg';
 import { useEffect, useState } from 'react';
 import { AgendaService } from '../services';
 import moment from 'moment';
+import Footer from '../components/Footer';
 
 export default function Events() {
   const [state, setState] = useState({
@@ -142,6 +143,7 @@ export default function Events() {
           height={500}
         />
       </main>
+      <Footer />
     </>
   )
 }

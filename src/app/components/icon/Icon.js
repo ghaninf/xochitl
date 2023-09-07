@@ -11,7 +11,7 @@ export default function Icon({ src, title, width, height, additionalCSS }) {
         title={title}
         alt={title}
         src={src}
-        className={`w-auto h-auto ${additionalCSS || ''}`}
+        className={`w-auto h-auto aspect-auto ${additionalCSS || ''}`}
       />
     </div>
   )

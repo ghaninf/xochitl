@@ -1,6 +1,7 @@
 import Link from "next/link";
+
 import XochitlLogo from '../assets/image/xochitl-galvez.png';
-import JuntosX from '../assets/image/juntos-x.png';
+import JuntosX from '../assets/image/text/juntos-x.png';
 import FacebookIcon from '../assets/image/socmed/facebook.png';
 import TwitterIcon from '../assets/image/socmed/twitter.png';
 import InstagramIcon from '../assets/image/socmed/instagram.png';

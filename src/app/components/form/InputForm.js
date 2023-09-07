@@ -18,6 +18,7 @@ export default function InputForm ({
         placeholder={inputPlaceholder}
         value={inputValue}
         onChange={onChange}
+        autoComplete="off"
         className='w-[318px] py-[10px] px-4 border border-transparant text-gray-600'
         required
       />

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import BannerImageXochilt from '../assets/image/logo-kokone.png';
+import UnMexico from '../assets/image/text/image-un-mexico.webp';
 import { ArrowText } from "./text";
 
 export default function BannerImage() {
@@ -11,7 +12,15 @@ export default function BannerImage() {
         <div className="flex flex-col gap-5 md:gap-10">
           <h1 className="max-w-[470px] break-words flex flex-col justify-center font-white tracking-[2px] leading-tight font-normal capitalize text-center">
             <span className="text-[30px] md:text-[65px]">JUNTOS POR</span>
-            <span className="text-[34px] md:text-[73px]">UN MEXICO</span>
+            <div className="relative w-56 md:w-[465px] h-9 md:h-[81.25px]">
+              <Image
+                fill
+                sizes="100%"
+                alt="Un Mexico"
+                src={UnMexico}
+                className="object-cover"
+              />
+            </div>
             <span className="text-[34px] md:text-[73px]">SIN LIMITES</span>
           </h1>
           <ArrowText
