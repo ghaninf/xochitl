@@ -142,16 +142,17 @@ export default function Events() {
             handleChange={handleChange}
           />
         </section>
-        <div className={`relative ease-in-out duration-300 ${loading}`}>
-          <EventSection data={state.data} />
+        <div className={`relative overflow-hidden w-full h-auto`}>
+          <EventSection data={state.data} animation={loading} />
         </div>
-        <Icon
-          additionalCSS={'fixed bottom-0 right-0 '}
-          title={'xochitl watermark'}
-          src={Watermark}
-          width={400}
-          height={500}
-        />
+        <div className='absolute bottom-0 right-0'>
+          <Icon
+            title={'xochitl watermark'}
+            src={Watermark}
+            width={400}
+            height={500}
+          />
+        </div>
       </main>
       <Footer />
     </>
