@@ -53,7 +53,7 @@ export default function Meets() {
         <section className="relative w-full h-screen md:h-[800px] flex flex-col-reverse md:flex-row flex-nowrap">
           <div className="basis-1/3 md:basis-1/2 md:relative bg-secondary w-full md:min-h-[800px] flex justify-center items-center">
             <div className="w-3/4 md:w-2/3 h-max relative flex flex-col gap-5 md:gap-10">
-              <div className="relative w-[360px] h-[180px]">
+              <div className="absolute md:relative w-full h-[99px] -top-44 md:-top-0 lg:w-[360px] lg:h-[180px]">
                 <Image
                   fill
                   sizes="100%"
