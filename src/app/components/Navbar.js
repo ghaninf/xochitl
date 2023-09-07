@@ -51,8 +51,8 @@ export default function Navbar(props) {
           />
         </div>
         <div className="lg:hidden flex flex-col gap-y-0 justify-center items-center">
-          <h4 className='font-resolute text-white z-50'>Menu</h4>
-          <Hamburger />
+          <h4 className={`font-resolute ${listColorNav[props.page].text} z-50`}>Menu</h4>
+          <Hamburger page={ props.page } />
         </div>
       </div>
       <ScrollEffect page={props.page} />
