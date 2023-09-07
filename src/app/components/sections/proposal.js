@@ -8,9 +8,12 @@ import { handleRichText } from "../../utils";
 
 import IconExpand from '../../assets/image/vector-expand.svg';
 import ArrowBlue from '../../assets/image/vector-arrow-blue.svg';
+import { usePathname } from "next/navigation";
 
 
 export default function ProposalSection() {
+  const pathName = usePathname();
+
   const menu = {
     menu1: [
       { id: 'menu1', title: 'Xóchitlnomics', description: 'México es uno de los países más desiguales del mundo. Sin duda, uno de los principales problemas de nuestro país es la distribución de la riqueza en pocas manos.\n\nPara combatir esto primero necesitamos tener un Estado de Derecho, la ley es la ley y la deben de cumplir todos sin excepción alguna.\n\nNecesitamos recuperar la paz y la tranquilidad eliminando por completo las extorciones por parte de los funcionarios públicos.\n\nTenemos que darle todas las herramientas necesarias a las nuevas generaciones para que destaquen profesionalmente, así como crear las condiciones necesarias para su desarrollo óptimo.'},
@@ -76,20 +79,22 @@ export default function ProposalSection() {
               </li>
             ))
           }
-          <div className="relative mt-12 group w-fit pb-1 box-border cursor-pointer before:w-full before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:scale-x-100">
-            <Link href={'/eventos'} className={`relative max-w-fit font-version font-normal leading-[53.5px] tracking-[1px] flex flex-row gap-x-4 items-center text-secondary-color text-lg md:text-xl lg:text-[27px]`} >
-              VER TODAS
-              <div className={`relative w-fit h-fit`} >
-                <Icon
-                  title={'VER TODAS'}
-                  width={28}
-                  height={22}
-                  src={ArrowBlue}
-                  additionalCSS={'w-[28px] h-[22.5px]'}
-                />
-              </div>
-            </Link>
-          </div>
+          {pathName !== '/propuestas' &&
+            <div className="relative mt-12 group w-fit pb-1 box-border cursor-pointer before:w-full before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:scale-x-100">
+              <Link href={'/propuestas'} className={`relative max-w-fit font-version font-normal leading-[53.5px] tracking-[1px] flex flex-row gap-x-4 items-center text-secondary-color text-lg md:text-xl lg:text-[27px]`} >
+                VER TODAS
+                <div className={`relative w-fit h-fit`} >
+                  <Icon
+                    title={'VER TODAS'}
+                    width={28}
+                    height={22}
+                    src={ArrowBlue}
+                    additionalCSS={'w-[28px] h-[22.5px]'}
+                  />
+                </div>
+              </Link>
+            </div>
+          }
           {/* <ArrowText
             title={'VER TODAS'}
             color={'font-secondary'}
