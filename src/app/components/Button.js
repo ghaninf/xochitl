@@ -27,7 +27,7 @@ export default function Button(props) {
     return(
       <button
         onClick={props?.onClick || undefined}
-        className={`relative w-fit min-w-[100px] font-medium text-[15px] h-fit px-4 py-1.5 flex flex-nowrap gap-x-1 justify-center items-center box-border rounded-md cursor-pointer border border-transparent
+        className={`relative w-fit min-w-[100px] font-version font-medium text-[15px] h-fit px-4 py-3 leading-[26px] tracking-[1.5px] flex flex-nowrap gap-x-1 justify-center items-center box-border rounded-md cursor-pointer border border-transparent
           ${positionIcon[props?.positionIcon] || ''} ${typeColor[props?.typeColor] || ''} ${props?.customClass || ''}`}>
         { props?.icon ? <Image width={12} height={12} src={props?.icon} alt='ico' /> : '' }
         { props?.text || null }
@@ -38,7 +38,7 @@ export default function Button(props) {
   return(
     <Link
       href={props?.href}
-      className={`relative w-fit min-w-[100px] font-medium text-[15px] h-fit px-4 py-[12px] flex flex-nowrap gap-x-1 justify-center items-center box-border rounded-md cursor-pointer border border-transparent
+      className={`relative w-fit min-w-[100px] font-version font-medium text-[15px] h-fit px-4 py-3 leading-[26px] tracking-[1.5px] flex flex-nowrap gap-x-1 justify-center items-center box-border rounded-md cursor-pointer border border-transparent
         ${positionIcon[props?.positionIcon] || ''} ${typeColor[props?.typeColor] || ''} ${props?.customClass || ''}`}>
       { props?.icon ? <Image width={12} height={12} src={props?.icon} alt='ico' /> : '' }
       { props?.text || null }

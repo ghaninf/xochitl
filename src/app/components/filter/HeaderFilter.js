@@ -11,7 +11,7 @@ export default function HeaderFilter({ month, next, prev }) {
 
   return(
     <div className="relative min-w-full">
-      <div className="relative w-full pb-3 flex flex-row justify-between md:justify-start items-center gap-x-6 border-b-2 border-pink-500">
+      <div className="relative w-full pb-3 flex flex-row justify-between md:justify-start items-center gap-x-6 border-b-[3px] border-pink-500">
         <time className="md:min-w-[400px] text-2xl md:text-[40px] font-resolute font-secondary">{currentTime.format('MMMM, YYYY')}</time>
         <div className="relative h-fit flex flex-row gap-x-1 md:gap-x-4 items-center">
           <div onClick={prev} className="relative">

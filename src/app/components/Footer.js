@@ -47,7 +47,7 @@ export default function Footer ({borderStyle = ""}) {
               height="h-[73.75px] md:h-[131.57px]"
             />
           </div>
-          <ul className="flex flex-col gap-3 text-sm md:text-[15px]">
+          <ul className="flex flex-col justify-start items-end gap-9 leading-6 tracking-[1px] text-lg md:text-xl">
             <li><Link href="https://www.xochitl.io/policies/privacy-policy" target="_blank" rel="noopener">Política de Privacidad</Link></li>
             <li><Link href="https://www.xochitl.io/policies/terms-of-service" target="_blank" rel="noopener">Términos y Condiciones</Link></li>
             <li><Link href="https://www.xochitl.io/pages/contacto" target="_blank" rel="noopener">Contacto</Link></li>
@@ -56,10 +56,7 @@ export default function Footer ({borderStyle = ""}) {
       </div>
       <div className="flex flex-col md:flex-row-reverse gap-5 md:gap-0">
         <div className="basis-1/2 lg:basis-1/3">
-          <p className="text-sm md:text-base flex flex-row gap-1 md:text-[15px]">
-            <span>&copy;</span>
-            <span>Xochitl Galvez. Todos los derechos reservados. Norte, 27, Nueva Vallejo, 07750, Ciudad de Mexico, Mexico.</span>
-          </p>
+          <p className="text-xs leading-6 tracking-[0.24px] font-normal font-appliedSans uppercase break-words">© 2023 Xóchitl Gálvez. Todos los derechos reservados. Norte 27, Nueva Vallejo, 07750, Ciudad de México, México.</p>
         </div>
         <div className="basis-1/2 lg:basis-2/3 flex md:items-center">
           <ul className="flex flex-row w-full items-center justify-evenly md:justify-normal md:gap-10">
