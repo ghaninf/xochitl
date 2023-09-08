@@ -8,7 +8,7 @@ export default function BannerImage() {
   return(
     <section className="relative bg-[color:var(--secondary-color)] font-resolute h-screen max-h-[1045px] md:h-[1028px] w-full flex overflow-hidden">
       <Image
-        width={751}
+        width={700}
         src={BannerImageXochilt}
         alt="banner-image"
         className="absolute top-20 md:top-6 md:left-10"
@@ -26,12 +26,13 @@ export default function BannerImage() {
                 className="object-cover"
               />
             </div>
-            <span className="text-[34px] md:text-[73px]">SIN LIMITES</span>
+            <span className="text-[34px] text- md:text-[73px]">SIN LIMITES</span>
           </h1>
           <ArrowText
             title={'ÚNETE AHORA'}
             href={'/#subscribe-section'}
             arrowColor={'white'}
+            additionalClass={'text-xl md:text-2xl lg:text-3xl'}
           />
         </div>
       </div>
