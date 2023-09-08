@@ -35,7 +35,7 @@ export default function ProposalSection() {
     <section className="relative w-full h-auto 2xl:px-[22%] xl:px-44 lg:px-28 md:px-20 px-16 py-20 lg:py-24 ">
       <div className="relative w-full max-w-[550px]">
         <h1 id="font-secondary" className="text-4xl lg:text-[55px] font-resolute tracking-[2px] leading-loose">PROPUESTAS</h1>
-        <h4 className="text-black font-appliedSans text-sm lg:text-[18px] font-normal leading-[160%]">Xóchitl sabe los desafíos y obstáculos que los Mexicanos se enfrentan al querer superarse. <br/> Reconoce que la historia no ha sido justa con México y por eso propone una agenda enfocada en impulsar a México y a los mexicanos hacia un futuro más justo, verde y sin límites.</h4>
+        <h4 className="text-black font-appliedSans text-sm lg:text-[18px] font-normal leading-[160%]">Xóchitl sabe los desafíos y obstáculos que los Mexicanos se enfrentan al querer superarse. <br/><br/> Reconoce que la historia no ha sido justa con México y por eso propone una agenda enfocada en impulsar a México y a los mexicanos hacia un futuro más justo, verde y sin límites.</h4>
       </div>
       <article className="relative flex flex-col md:flex-row gap-8 md:gap-20 lg:gap-40 justify-center font-secondary font-appliedSans text-sm sm:text-xl lg:text-[30px] font-normal leading-[53.5px] tracking-[1px] max-lg:mt-10">
         <ul className="relative w-full flex flex-col gap-y-8 lg:mt-16 max-sm:max-w-full max-w-[476px]" >
