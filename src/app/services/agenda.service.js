@@ -1,8 +1,25 @@
 import axios from "axios";
 
 class AgendaService {
-  async getList(data) {
-    const URL = `${process.env.NEXT_PUBLIC_URL}/api/agenda/list`
+  async getListByMonth(data) {
+    const URL = `${process.env.NEXT_PUBLIC_URL}/api/agenda/listByMonth`
+    return axios
+      .get(
+        URL,
+        {
+          params: data,
+        }
+      )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error
+      })
+  }
+  
+  async getListByFilter(data) {
+    const URL = `${process.env.NEXT_PUBLIC_URL}/api/agenda/listByFilter`
     return axios
       .get(
         URL,
@@ -18,14 +35,11 @@ class AgendaService {
       })
   }
 
-  async getFilter(params) {
+  async getFilter() {
     const URL = `${process.env.NEXT_PUBLIC_URL}/api/agenda/filter`
     return axios
       .get(
-        URL,
-        {
-          params: params
-        }
+        URL
       )
       .then(response => {
         return response.data;
