@@ -26,7 +26,7 @@ export default function generateContentItem(item, index) {
         <article key={index} className="relative">
           <div className="flex flex-col gap-3 px-10 md:px-20">
             <h2 className="font-resolute lg:w-max text-md md:text-[27px] text-[color:var(--secondary-color)] decoration-[color:var(--primary-color)] underline underline-offset-4 md:underline-offset-[6px]">{item.title}</h2>
-            {handleRichText(item.excerpt, "font-extralight text-base md:text-[25px] leading-8 lg:leading-[38.04px]")}
+            {handleRichText(item.excerpt, "font-light text-base md:text-[25px] leading-8 lg:leading-[38.04px]")}
           </div>
         </article>
       )
