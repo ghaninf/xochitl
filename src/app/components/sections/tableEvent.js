@@ -16,17 +16,17 @@ export default function Events() {
     data: [],
     filter: {
       date: '',
-      state: '',
       city: '',
+    },
+    filterByMonth: {
       startDate: moment().startOf('month').valueOf(),
       endDate: moment().endOf('month').valueOf()
     },
     dataFilter: {
-      date: [ 'Fecha' ],
-      state: [ 'Todos' ],
       city: [ 'Todos' ]
     },
     animateHeader: '',
+    inital: true
   })
   const [pagination, setPagination] = useState({
     index: 1,
@@ -38,8 +38,8 @@ export default function Events() {
   useEffect(() => {
     setLoading(state.animateHeader);
     const promises = [];
-    promises.push(AgendaService.getFilter({ startDate: state.filter.startDate, endDate: state.filter.endDate }))
-    promises.push(AgendaService.getList({ ...state.filter, ...pagination}))
+    promises.push(AgendaService.getFilter())
+    promises.push(AgendaService.getListByMonth(state.filterByMonth))
     Promise.all(promises)
       .then(values => {
         setState(prev => ({
@@ -47,10 +47,9 @@ export default function Events() {
           data: values[1].data,
           dataFilter: {
             ...prev.dataFilter,
-            state: values[0].state,
             city: values[0].city,
-            date: values[0].date
-          }
+          },
+          inital: false
         }))
         setPagination(prev => ({
           ...prev,
@@ -68,29 +67,48 @@ export default function Events() {
           setLoading('animate-show-to-right');
         }
       })
-  }, [state.filter.startDate])
+  }, [state.filterByMonth.startDate])
 
   useEffect(() => {
-    setLoading('animate-to-bottom');
-    AgendaService.getList({ ...state.filter, ...pagination})
-      .then(res => {
-        setState(prev => ({
-          ...prev,
-          data: res.data,
-        }))
-        setPagination(prev => ({
-          ...prev,
-          index: res.page.index,
-          total: res.page.total
-        }))
-      })
-      .catch(err => {
-        console.error(err)
-      })
-      .finally(() => {
-        setLoading('animate-from-top');
-      })
-  }, [state.filter.date, state.filter.state, state.filter.city])
+    if (!state.inital) {
+      setLoading('animate-to-bottom');
+      AgendaService.getListByFilter({ ...state.filter, ...pagination})
+        .then(res => {
+          setState(prev => ({
+            ...prev,
+            data: res.data,
+          }))
+          setPagination(prev => ({
+            ...prev,
+            index: res.page.index,
+            total: res.page.total
+          }))
+        })
+        .catch(err => {
+          console.error(err)
+        })
+        .finally(() => {
+          setLoading('animate-from-top');
+        })
+    }
+  }, [state.filter.date, state.filter.city])
+
+  const handleDate = (e) => {
+    let value = e.target.value
+    if (value === "" || value === '') {
+      value = ''
+    } else {
+      value = moment(value).valueOf()
+    }
+    setState(prev => ({
+      ...prev,
+      filter: {
+        ...prev.filter,
+        date: value
+      },
+      animateHeader: ''
+    }))
+  }
 
   const handleChange = (menu, value) => {
     setState(prev => ({
@@ -104,11 +122,11 @@ export default function Events() {
   }
 
   const handleNext = () => {
-    const nextMonth = moment(state.filter.startDate).add(1, 'M')
+    const nextMonth = moment(state.filterByMonth.startDate).add(1, 'M')
     setState(prev => ({
       ...prev,
-      filter: {
-        ...prev.filter,
+      filterByMonth: {
+        ...prev.filterByMonth,
         startDate: nextMonth.startOf('month').valueOf(),
         endDate: nextMonth.endOf('month').valueOf()
       },
@@ -117,11 +135,11 @@ export default function Events() {
   }
 
   const handlePrev = () => {
-    const nextMonth = moment(state.filter.startDate).subtract(1, 'M')
+    const nextMonth = moment(state.filterByMonth.startDate).subtract(1, 'M')
     setState(prev => ({
       ...prev,
-      filter: {
-        ...prev.filter,
+      filterByMonth: {
+        ...prev.filterByMonth,
         startDate: nextMonth.startOf('month').valueOf(),
         endDate: nextMonth.endOf('month').valueOf()
       },
@@ -133,7 +151,7 @@ export default function Events() {
     <div className='relative md:min-h-[400px]'>
       <section className="">
         <HeaderFilter
-          month={state.filter.startDate}
+          month={state.filterByMonth.startDate}
           next={handleNext}
           prev={handlePrev}
         />
@@ -141,6 +159,7 @@ export default function Events() {
           values={state.filter}
           data={state.dataFilter}
           handleChange={handleChange}
+          handleDate={handleDate}
         />
       </section>
       <div className={`relative overflow-hidden w-full h-auto`}>
