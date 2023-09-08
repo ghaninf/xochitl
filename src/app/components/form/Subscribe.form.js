@@ -123,7 +123,7 @@ export default function SubscribeForm() {
           />
         </div>
         <h4 className="mt-4 font-appliedSans font-normal tracking-wider leading-8 text-lg lg:text-xl">Xóchitl Gálvez conoce los desafíos que se enfrentan los mexicanos todos los días y tiene las soluciones que México necesita para un futuro sin límites.</h4>
-        <div className="relative mt-4 group w-fit pb-1 box-border cursor-pointer before:w-full before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:scale-x-100">
+        <div className="relative mt-4 group w-fit pb-1 box-border cursor-pointer before:w-full before:border-b-2 before:border-pink-500 before:absolute before:bottom-[-2px] lg:before:-bottom-1 before:left-0 before:transform before:scale-x-100">
           <Link href={'/xochitl'} className={`relative max-w-fit font-version font-normal tracking-[0.945px] flex flex-row gap-x-4 items-center text-white text-sm md:text-base lg:text-[17.5px]`} >
             CONOCER MÁS
             <div className={`relative w-fit h-fit`} >

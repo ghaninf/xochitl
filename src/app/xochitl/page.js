@@ -1,18 +1,15 @@
 import Image from "next/image";
-import { Icon, Navbar } from "../components";
+import { Logo, Navbar } from "../components";
 import Footer from "../components/Footer";
 import { generateContentItem } from "../utils";
 import { metaData } from "../metaData";
 
 import XochitlImage from '../assets/image/banner-image-2.png';
-// import ShareIcon from '../assets/image/socmed/share-white-fill.png';
-// import FacebookIcon from '../assets/image/socmed/facebook-white-fill.png';
-// import TwitterIcon from '../assets/image/socmed/twitter-white-fill.png';
-// import InstagramIcon from '../assets/image/socmed/instagram-white-fill.png';
-import ShareIcon from '../assets/image/socmed/share-outline.svg';
+import TiktokIcon from '../assets/image/socmed/tiktok-fill.webp';
 import FacebookIcon from '../assets/image/socmed/facebook-fill.svg';
 import TwitterIcon from '../assets/image/socmed/twitter-fill.svg';
 import InstagramIcon from '../assets/image/socmed/instagram-fill.svg';
+import YoutubeIcon from '../assets/image/socmed/youtube-fill.webp';
 import VidaPersonal from '../assets/image/vida-personal.png';
 import ConoceImage from '../assets/image/text/image-conoce-xochitl.webp';
 
@@ -22,11 +19,14 @@ export async function generateMetadata() {
 }
 
 export default async function Meets() {
+  
   const socMeds = [
-    { src: ShareIcon, title: "share-icon", href: "https://www.facebook.com"},
-    { src: FacebookIcon, title: "facebook-icon", href: "https://www.facebook.com"},
-    { src: TwitterIcon, title: "twitter-icon", href: "https://www.twitter.com"},
-    { src: InstagramIcon, title: "instagram-icon", href: "https://www.instagram.com"},
+    { src: TiktokIcon, width: "w-6 md:w-8", height: "h-6 md:h-8", href: "https://www.tiktok.com/@xochitlgalvezr"  , target: '_blank', rel: 'noopener'},
+    { src: FacebookIcon, width: "w-[10.03px] md:w-[14.18px]", height: "h-[19.11px] md:h-[27.01px]", href: "https://www.facebook.com/Xochitl.Galvez.R/", target: '_blank', rel: 'noopener'},
+    { src: TwitterIcon, width: "w-[21.73px] md:w-[30.72px]", height: "h-[17.66px] md:h-[24.96px]", href: "https://twitter.com/XochitlGalvez", target: '_blank', rel: 'noopener'},
+    { src: YoutubeIcon, width: "w-[29px] md:w-[41px]", height: "h-[29px] md:h-[41px]", href: "https://www.youtube.com/@XochitlGalvezR" , target: '_blank', rel: 'noopener'},
+    { src: InstagramIcon, width: "w-[19.11px] md:w-[27.01px]", height: "h-[19.11px] md:h-[27.01px]", href: "https://www.instagram.com/XochitlGalvez/" , target: '_blank', rel: 'noopener'},
+    // { src: DiscordIcon, width: "w-[22.63px] md:w-[32px]", height: "h-[17.25px] md:h-[24.39px]", href: "https://www.discord.com" , target: '_blank', rel: 'noopener'},
   ];
 
   const content = [
@@ -74,9 +74,9 @@ export default async function Meets() {
   return(
     <>
       <Navbar page='xochitl' />
-      <main className="relative min-h-screen flex flex-col items-center justify-between">
+      <main className="relative min-h-screen flex flex-col lg:gap-y-12 items-center justify-between">
         <section className="relative w-full h-screen md:h-[600px] flex flex-col-reverse md:flex-row flex-nowrap">
-          <div className="basis-1/3 md:basis-1/2 md:relative bg-secondary w-full md:h-[600px] flex justify-center items-center">
+          <div className="basis-1/3 md:basis-[calc(50%-30px)] md:relative bg-secondary w-full md:h-[600px] flex justify-center items-center">
             <div className="w-3/4 md:w-2/3 h-max relative flex flex-col gap-5 md:mt-10 md:gap-10">
               <div className="absolute md:relative w-full h-[99px] z-10 -top-44 md:-top-0 lg:w-[360px] lg:h-[180px]">
                 <Image
@@ -90,12 +90,12 @@ export default async function Meets() {
               <p className="text-white font-appliedSans leading-[25.9px] md:leading-[33.9px] text-base md:text-[22px]">Xóchitl es una mujer que toda su vida se ha enfrentado y ha luchado contra la desigualdad en México, y ha podido salir adelante a base esfuerzo, valentía y determinación.</p>
               <ul className="flex flex-row items-center gap-10">
                 {socMeds.map((socMed, index) => (
-                  <li key={index}><Icon {...socMed}/></li>
+                  <li key={index}><Logo {...socMed}/></li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className="basis-2/3 md:basis-1/2 md:relative w-full md:h-[550px]">
+          <div className="basis-2/3 md:basis-[calc(50%+30px)] md:relative w-full md:h-[600px]">
             <div className="w-full h-full overflow-hidden">
               <Image src={XochitlImage} alt="xochitl-image" className="w-full h-full object-cover scale-200 md:scale-150 mt-10 md:mt-20 -ml-20 md:-ml-20"/>
             </div>

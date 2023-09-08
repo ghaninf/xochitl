@@ -10,7 +10,7 @@ export default async function Proposal() {
   return (
     <>
       <Navbar page={'propuestas'} />
-      <main className="relative min-h-screen flex flex-col items-center justify-between">
+      <main className="relative min-h-screen pt-[140px] flex flex-col items-center justify-between box-border">
         <ProposalSection />
       </main>
       <Footer />
