@@ -15,7 +15,7 @@ export default function generateContentItem(item, index) {
       return (
         <article key={index} className="px-2 md:px-0">
           <div className="flex flex-col gap-3 px-5 md:px-10 w-10/12 mx-auto border-s-2 md:border-s-8 border-[color:var(--primary-color)]">
-            <h2 className="font-resolute text-md md:text-[27px] text-[color:var(--secondary-color)] decoration-[color:var(--primary-color)] underline underline-offset-4 md:underline-offset-[6px]">{item.quote}</h2>
+            <h2 className="font-resolute md:h-5/6 lg:w-4/5 text-md md:text-[27px] text-[color:var(--secondary-color)]">{item.quote}</h2>
             <p className="font-version text-sm md:text-[25px] leading-[17px] md:leading-8">{item.author.toUpperCase()}</p>
           </div>
         </article>
@@ -26,7 +26,7 @@ export default function generateContentItem(item, index) {
         <article key={index} className="relative">
           <div className="flex flex-col gap-3 px-10 md:px-20">
             <h2 className="font-resolute lg:w-max text-md md:text-[27px] text-[color:var(--secondary-color)] decoration-[color:var(--primary-color)] underline underline-offset-[5px] md:underline-offset-[6px]">{item.title}</h2>
-            {handleRichText(item.excerpt, "font-light text-base md:text-[25px] leading-8 lg:leading-[38.04px]")}
+            {handleRichText(item.excerpt, "font-openSansLight font-thin text-base md:text-[24px] leading-8 lg:leading-[39px]")}
           </div>
         </article>
       )
