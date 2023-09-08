@@ -52,7 +52,7 @@ export default function ProposalSection() {
                   <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
                 <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-full mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-md lg:max-w-lg xl:max-w-2xl transform ease-in-out duration-300`}>
-                  {handleRichText(el.description, 'first:mt-0 mt-6 text-[22px] font-openSansLight font-light')}
+                  {handleRichText(el.description, 'text-black first:mt-0 mt-6 text-[22px] font-openSansLight font-light')}
                 </div>
               </li>
             ))
@@ -73,7 +73,7 @@ export default function ProposalSection() {
                   <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
                 <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-auto mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
-                {handleRichText(el.description, 'first:mt-0 mt-6 text-[22px] font-openSansLight font-light')}
+                {handleRichText(el.description, 'text-black first:mt-0 mt-6 text-[22px] font-openSansLight font-light')}
                 </div>
               </li>
             ))
