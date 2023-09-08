@@ -25,6 +25,9 @@ module.exports = {
       colors: {
         "primary-color": "var(--primary-color)",
         "secondary-color": "var(--secondary-color)",
+      },
+      scale: {
+        '200': '2'
       }
     },
   },

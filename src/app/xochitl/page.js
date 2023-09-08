@@ -75,10 +75,10 @@ export default async function Meets() {
     <>
       <Navbar page='xochitl' />
       <main className="relative min-h-screen flex flex-col items-center justify-between">
-        <section className="relative w-full h-screen md:h-[800px] flex flex-col-reverse md:flex-row flex-nowrap">
-          <div className="basis-1/3 md:basis-1/2 md:relative bg-secondary w-full md:min-h-[800px] flex justify-center items-center">
-            <div className="w-3/4 md:w-2/3 h-max relative flex flex-col gap-5 md:gap-10">
-              <div className="absolute md:relative w-full h-[99px] -top-44 md:-top-0 lg:w-[360px] lg:h-[180px]">
+        <section className="relative w-full h-screen md:h-[600px] flex flex-col-reverse md:flex-row flex-nowrap">
+          <div className="basis-1/3 md:basis-1/2 md:relative bg-secondary w-full md:h-[600px] flex justify-center items-center">
+            <div className="w-3/4 md:w-2/3 h-max relative flex flex-col gap-5 md:mt-10 md:gap-10">
+              <div className="absolute md:relative w-full h-[99px] z-10 -top-44 md:-top-0 lg:w-[360px] lg:h-[180px]">
                 <Image
                   fill
                   sizes="100%"
@@ -95,13 +95,13 @@ export default async function Meets() {
               </ul>
             </div>
           </div>
-          <div className="basis-2/3 md:basis-1/2 md:relative w-full md:h-[760px]">
-            <div className="w-full h-full">
-              <Image src={XochitlImage} alt="xochitl-image" className="w-full h-full object-cover"/>
+          <div className="basis-2/3 md:basis-1/2 md:relative w-full md:h-[550px]">
+            <div className="w-full h-full overflow-hidden">
+              <Image src={XochitlImage} alt="xochitl-image" className="w-full h-full object-cover scale-200 md:scale-150 mt-10 md:mt-20 -ml-20 md:-ml-20"/>
             </div>
           </div>
         </section>
-        <section className="relative w-full lg:w-9/12 mx-auto min-h-screen mt-14 mb-14 box-border">
+        <section className="relative w-full lg:w-9/12 mx-auto min-h-screen mt-14 md:mt-3 mb-14 box-border">
           <div className="flex flex-col gap-10 md:gap-20">
             {content.map((item, index) => generateContentItem(item, index))}
           </div>
