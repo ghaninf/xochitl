@@ -23,7 +23,7 @@ export default function Footer ({borderStyle = ""}) {
 
   return (
     <footer className={`flex flex-col gap-5 md:gap-14 p-10 md:px-20 md:py-10 font-appliedSans ${borderStyle}`}>
-      <div className="flex flex-col md:flex-row gap-5">
+      <div className="flex flex-col md:flex-row gap-8">
         <div className="basis-1/2 lg:basis-2/3 flex flex-col gap-5 md:gap-10">
           <div className="w-max">
             <FooterLogo

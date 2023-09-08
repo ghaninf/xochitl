@@ -31,13 +31,13 @@ export default function ProposalSection() {
   const [active, setActive] = useState('');
 
   return(
-    <section className="relative w-full h-auto 2xl:px-[22%] px-14 md:px-16 lg:px-20 xl:px-24 py-20 lg:py-20 ">
+    <section className="relative w-full h-auto px-14 md:px-16 lg:px-20 xl:px-24 py-12 lg:py-20 2xl:px-[22%]">
       <div className="relative w-full max-w-[650px]">
-        <h1 id="font-secondary" className="text-4xl lg:text-6xl font-extrabold font-resolute tracking-[1px] leading-loose">PROPUESTAS</h1>
+        <h1 id="font-secondary" className="text-4xl lg:text-[64px] font-extrabold font-resolute tracking-[1px] leading-loose">PROPUESTAS</h1>
         <h4 className="text-black text-lg lg:text-[22px] font-openSansLight font-light tracking-[1px] leading-[160%]">Xóchitl sabe los desafíos y obstáculos que los Mexicanos se enfrentan al querer superarse. <br/><br/>Reconoce que la historia no ha sido justa con México y por eso propone una agenda enfocada en impulsar a México y a los mexicanos hacia un futuro más justo, verde y sin límites.</h4>
       </div>
-      <article className="relative flex flex-col md:flex-row gap-8 md:gap-20 lg:gap-32 justify-center font-secondary font-appliedSans font-normal text-sm sm:text-xl lg:text-[30px] leading-[53.5px] tracking-[1px] max-lg:mt-10">
-        <ul className="relative w-full pl-20 flex flex-col gap-y-8 lg:mt-16 max-sm:max-w-full max-w-2xl" >
+      <article className="relative flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-28 xl:gap-32 justify-center font-secondary font-appliedSans font-normal text-xl lg:text-[30px] leading-[53.5px] tracking-[1px] max-lg:mt-10">
+        <ul className="relative w-full md:pl-12 lg:pl-16 xl:pl-20 flex flex-col gap-y-5 lg:gap-y-6 xl:gap-y-8 lg:mt-16 max-sm:max-w-full max-w-2xl" >
           {
             menu.menu1.map((el, key) => (
               <li key={key} className="max-w-full md:max-w-2xl" >
@@ -49,10 +49,10 @@ export default function ProposalSection() {
                     title={'Xóchitlnomics'}
                     additionalCSS={`max-h-3 lg:max-h-4 max-w-[8px] lg:max-w-[11px] ease-in-out duration-200 ${el.id === active ? 'rotate-90' : ''}`}
                   />
-                  <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
+                  <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-2 lg:before:border-b-[3px] before:border-pink-500 before:absolute before:bottom-1 lg:before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
-                <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-full mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-md lg:max-w-lg xl:max-w-2xl transform ease-in-out duration-300`}>
-                  {handleRichText(el.description, 'text-black first:mt-0 mt-6 text-[22px] font-openSansLight font-light')}
+                <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-full mt-0 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-md lg:max-w-lg xl:max-w-2xl transform ease-in-out duration-300`}>
+                  {handleRichText(el.description, 'text-black first:mt-0 mt-4 lg:mt-5 xl:mt-6 text-base lg:text-lg xl:text-[22px] font-openSansLight font-light')}
                 </div>
               </li>
             ))
@@ -70,16 +70,16 @@ export default function ProposalSection() {
                     title={'Xóchitlnomics'}
                     additionalCSS={`max-h-3 lg:max-h-4 max-w-[8px] lg:max-w-[11px] ${el.id === active ? 'rotate-90' : ''}`}
                   />
-                  <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
+                  <span className={`${el.id === active ? 'before:w-0' : 'before:w-full'} relative before:border-b-2 lg:before:border-b-[3px] before:border-pink-500 before:absolute before:bottom-1 lg:before:-bottom-1 before:left-0 before:transform before:duration-200`}>{el.title}</span>
                 </div>
                 <div className={`${el.id === active ? 'animate-show-text' : 'animate-hide-text'} relative overflow-hidden w-auto mt-2 sm:mt-3 lg:mt-4 pl-5 lg:pl-7 max-w-full md:max-w-sm lg:max-w-md transform ease-in-out duration-300`}>
-                {handleRichText(el.description, 'text-black first:mt-0 mt-6 text-[22px] font-openSansLight font-light')}
+                {handleRichText(el.description, 'text-black first:mt-0 mt-4 lg:mt-5 xl:mt-6 text-base lg:text-lg xl:text-[22px] font-openSansLight font-light')}
                 </div>
               </li>
             ))
           }
           {pathName !== '/propuestas' &&
-            <div className="relative mt-12 group w-fit pb-1 box-border cursor-pointer before:w-full before:border-b-[3px] before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:scale-x-100">
+            <div className="relative mt-12 group w-fit pb-1 box-border cursor-pointer before:w-full before:border-b-2 lg:before:border-b-[3px] before:border-pink-500 before:absolute before:bottom-1 lg:before:-bottom-1 before:left-0 before:transform before:scale-x-100">
               <Link href={'/propuestas'} className={`relative max-w-fit font-version font-normal leading-[53.5px] tracking-[1px] flex flex-row gap-x-4 items-center text-secondary-color text-lg md:text-xl lg:text-[27px]`} >
                 VER TODAS
                 <div className={`relative w-fit h-fit`} >
@@ -101,7 +101,7 @@ export default function ProposalSection() {
             href={'/eventos'}
             width={30}
             height={24}
-            additionalClass={'mt-4 md:mt-20 lg:mt-28 text-sm lg:text-[30px]'}
+            additionalClass={'mt-4 md:mt-20 lg:mt-28 lg:text-[30px]'}
           /> */}
         </ul>
       </article>
