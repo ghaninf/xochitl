@@ -97,7 +97,7 @@ export default async function Meets() {
           </div>
           <div className="basis-2/3 md:basis-[calc(50%+30px)] md:relative w-full md:h-[600px]">
             <div className="w-full h-full overflow-hidden">
-              <Image src={XochitlImage} alt="xochitl-image" className="w-full h-full object-cover scale-200 md:scale-150 mt-10 md:mt-20 -ml-20 md:-ml-20"/>
+              <Image src={XochitlImage} priority={'high'} alt="xochitl-image" className="w-full h-full object-cover scale-200 md:scale-150 mt-10 md:mt-20 -ml-20 md:-ml-20"/>
             </div>
           </div>
         </section>
