@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { generateContentItem } from "../utils";
 import { metaData } from "../metaData";
 
-import XochitlImage from '../assets/image/banner-image-2.png';
+import XochitlImage from '../assets/image/banner-image-2.webp';
 import TiktokIcon from '../assets/image/socmed/tiktok-fill.webp';
 import FacebookIcon from '../assets/image/socmed/facebook-fill.svg';
 import TwitterIcon from '../assets/image/socmed/twitter-fill.svg';
