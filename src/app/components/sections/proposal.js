@@ -32,7 +32,7 @@ export default function ProposalSection() {
   const [active, setActive] = useState('');
 
   return(
-    <section className="relative w-full h-auto 2xl:px-[22%] xl:px-44 lg:px-28 md:px-20 px-16 py-20 lg:py-24 ">
+    <section className="relative w-full h-auto 2xl:px-[22%] xl:px-44 lg:px-28 md:px-20 px-16 py-10 md:py-20 lg:py-24 ">
       <div className="relative w-full max-w-[550px]">
         <h1 id="font-secondary" className="text-4xl lg:text-[55px] font-resolute tracking-[2px] leading-loose">PROPUESTAS</h1>
         <h4 className="text-black font-appliedSans text-sm lg:text-[18px] font-normal leading-[160%]">Xóchitl sabe los desafíos y obstáculos que los Mexicanos se enfrentan al querer superarse. <br/><br/> Reconoce que la historia no ha sido justa con México y por eso propone una agenda enfocada en impulsar a México y a los mexicanos hacia un futuro más justo, verde y sin límites.</h4>
