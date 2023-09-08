@@ -56,7 +56,7 @@ export default function Footer ({borderStyle = ""}) {
       </div>
       <div className="flex flex-col md:flex-row-reverse gap-5 md:gap-0">
         <div className="basis-1/2 lg:basis-1/3">
-          <p className="text-xs leading-6 tracking-[0.24px] font-normal font-appliedSans uppercase break-words">© 2023 Xóchitl Gálvez. Todos los derechos reservados. Norte 27, Nueva Vallejo, 07750, Ciudad de México, México.</p>
+          <p className="text-xs leading-6 tracking-[1px] font-normal font-openSans uppercase break-words">© 2023 Xóchitl Gálvez. Todos los derechos reservados. Norte 27, Nueva Vallejo, 07750, Ciudad de México, México.</p>
         </div>
         <div className="basis-1/2 lg:basis-2/3 flex md:items-center">
           <ul className="flex flex-row w-full items-center justify-evenly md:justify-normal md:gap-10">
