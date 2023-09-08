@@ -111,8 +111,7 @@ export default function SubscribeForm() {
   }
 
   return(
-    <div id="subscribe-section" className="relative lg:absolute lg:-top-[116px] w-full max-w-full lg:max-w-[calc(50%+20px)] bg-secondary pt-6 pb-16 sm:pb-20 sm:pt-10 lg:py-16 xl:pb-[92px] xl:pt-[60px] px-8 sm:px-16 lg:px-24 xl:px-[132px] box-border z-10">
-      <p>{state?.errorMessage}</p>
+    <div id="subscribe-section" className="relative lg:absolute lg:-top-[116px] w-full max-w-full lg:max-w-[calc(50%+20px)] bg-secondary pt-6 pb-16 sm:pb-20 sm:pt-10 lg:py-16 xl:pb-[92px] xl:pt-[60px] px-8 sm:px-16 lg:px-20 xl:px-20 box-border z-10">
       <div className="relative flex flex-col gap-y-[10px] font-white">
         <div className="relative w-full max-w-sm lg:max-w-[400px] h-5 sm:h-7 lg:h-[30px]">
           <Image
@@ -120,10 +119,10 @@ export default function SubscribeForm() {
             sizes="100%"
             alt={'La Experanza De Mexico'}
             src={Laexperanza}
-            className={'object-cover'}
+            className={'aspect-auto object-cover'}
           />
         </div>
-        <h4 className="font-appliedSans font-normal leading-8 text-lg lg:text-[21px]">Xóchitl Gálvez conoce los desafíos que se enfrentan los mexicanos todos los días y tiene las soluciones que México necesita para un futuro sin límites.</h4>
+        <h4 className="mt-4 font-appliedSans font-normal tracking-wider leading-8 text-lg lg:text-xl">Xóchitl Gálvez conoce los desafíos que se enfrentan los mexicanos todos los días y tiene las soluciones que México necesita para un futuro sin límites.</h4>
         <div className="relative mt-4 group w-fit pb-1 box-border cursor-pointer before:w-full before:border-b-2 before:border-pink-500 before:absolute before:-bottom-1 before:left-0 before:transform before:scale-x-100">
           <Link href={'/xochitl'} className={`relative max-w-fit font-version font-normal tracking-[0.945px] flex flex-row gap-x-4 items-center text-white text-sm md:text-base lg:text-[17.5px]`} >
             CONOCER MÁS
@@ -141,6 +140,7 @@ export default function SubscribeForm() {
       </div>
       <form className="relative mt-12 sm:mt-16 lg:mt-[82px] font-white" onSubmit={onSubmit}>
         <h2 className="relative mx-auto w-[318px] mb-4 text-[22px] tracking-[1.32px] font-version text-center">HAGAMOS ESTO JUNTOS</h2>
+        <p>{state?.errorMessage}</p>
         <div className={`relative w-[318px] sm:w-[370px] mx-auto ${state.success ? 'flex' : 'hidden'} flex-col gap-[2px] justify-center items-center`}>
           <h4 className="text-center">You have been subscribe</h4>
           <Button
