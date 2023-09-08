@@ -10,7 +10,6 @@ import IconExpand from '../../assets/image/vector-expand.svg';
 import ArrowBlue from '../../assets/image/vector-arrow-blue.svg';
 import { usePathname } from "next/navigation";
 
-
 export default function ProposalSection() {
   const pathName = usePathname();
 
